@@ -31,6 +31,16 @@ body {
   box-sizing: border-box;
 }
 
+/* Long German compound words (e.g. "Reservierungsbedingungen") must break
+   instead of overflowing the card on narrow viewports. */
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
 .mt-root {
   min-height: 100vh;
   background: var(--porzellan);

@@ -1,4 +1,5 @@
 import React,{useEffect} from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./TermsUses.css";
 
@@ -137,7 +138,7 @@ const TermsUses = () => {
 
           <p>
             {t("termsUses.sections.privacy.text")}{" "}
-            <a href="/rechtliches">{t("termsUses.sections.privacy.link")}</a>
+            <Link to="/privacy">{t("termsUses.sections.privacy.link")}</Link>
             {t("termsUses.sections.privacy.suffix")}
           </p>
         </section>

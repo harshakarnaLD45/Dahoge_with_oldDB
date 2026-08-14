@@ -1,0 +1,89 @@
+/* Global Styles - Matching existing website design system */
+
+/* CSS Variables from reference website */
+:root {
+  --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --kobalt: #1f3c8f;
+  --kobalt-dunkel: #16295f;
+  --tinte: #131c33;
+  --porzellan: #f5f3ec;
+  --papier: #ffffff;
+  --eiche: #7c5230;
+  --eiche-hell: #9a6c42;
+  --honig: #d9a441;
+  --linie: #dad4c6;
+  --moos: #4c7a4f;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--porzellan);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.mt-root {
+  min-height: 100vh;
+  background: var(--porzellan);
+  color: var(--tinte);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mt-wrap {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================================
+   HOME PAGE RESPONSIVE MAX-WIDTH
+   320px to 2560px
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .home-page {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .home-page {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .home-page {
+    max-width: 960px;
+  }
+}
+
+@media print {
+  .home-page {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+#noscript {
+  max-width: 620px;
+  margin: 80px auto;
+  padding: 28px;
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 16px;
+  font: 400 16px/1.55 system-ui, sans-serif;
+  color: var(--tinte);
+}

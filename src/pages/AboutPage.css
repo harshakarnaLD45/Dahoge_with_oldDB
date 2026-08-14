@@ -1,0 +1,669 @@
+
+
+/* =========================================================
+   CSS VARIABLES
+   ========================================================= */
+
+:root {
+  --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype',
+    'Times New Roman', serif;
+
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --kobalt: #1f3c8f;
+  --kobalt-dunkel: #16295f;
+  --tinte: #131c33;
+  --porzellan: #f5f3ec;
+  --papier: #ffffff;
+  --eiche: #7c5230;
+  --eiche-hell: #9a6c42;
+  --honig: #d9a441;
+  --linie: #dad4c6;
+  --moos: #4c7a4f;
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.about-page-container {
+  background: var(--porzellan);
+  color: var(--tinte);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+}
+
+.about-page-container *,
+.about-page-container *::before,
+.about-page-container *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--eiche);
+}
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.about-page-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(26px, 4.5vw, 38px);
+  line-height: 1.06;
+  margin: 6px 0 12px;
+  color: var(--kobalt-dunkel);
+}
+
+/* =========================================================
+   LEAD
+   ========================================================= */
+
+.about-page-lead {
+  font-size: 17px;
+  max-width: 52ch;
+  color: #3a4258;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FEATURE CARDS
+   ========================================================= */
+
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  min-width: 0;
+}
+
+.about-card {
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 0;
+}
+
+.about-card-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--kobalt-dunkel);
+  margin-bottom: 6px;
+}
+
+.about-card-text {
+  font-size: 14.5px;
+  color: #3A4258;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CLAIMS
+   ========================================================= */
+
+.about-claims {
+  font-size: 14.5px;
+  color: #3A4258;
+  line-height: 1.6;
+}
+
+.about-claims i {
+  font-style: italic;
+}
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+
+.about-section-eyebrow {
+  margin: 36px 0 8px !important;
+}
+
+.about-section-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(20px, 3.5vw, 26px);
+  line-height: 1.2;
+  margin: 0 0 14px;
+  color: var(--kobalt-dunkel);
+}
+
+/* =========================================================
+   STEPS
+   ========================================================= */
+
+.about-steps {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.about-step-card {
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.about-step-card > div:last-child {
+  min-width: 0;
+}
+
+.step-nr {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--kobalt);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--serif);
+  font-size: 17px;
+}
+
+.step-text {
+  font-size: 14.5px;
+  color: #3A4258;
+  line-height: 1.6;
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+.about-link {
+  color: var(--kobalt);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+  overflow-wrap: anywhere;
+}
+
+.about-link:hover {
+  color: var(--kobalt-dunkel);
+  text-decoration: underline;
+}
+
+/* =========================================================
+   GOOD TO KNOW CARD
+   ========================================================= */
+
+.about-info-card {
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 16px;
+  min-width: 0;
+}
+
+.about-info-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--kobalt-dunkel);
+  margin-bottom: 8px;
+}
+
+.about-info-content {
+  font-size: 14.5px;
+  color: #3A4258;
+  display: grid;
+  gap: 8px;
+  line-height: 1.6;
+  min-width: 0;
+}
+
+.about-info-content > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.about-notice {
+  font-size: 12.5px;
+  color: #6a7288;
+  line-height: 1.5;
+  margin-top: 18px !important;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   TABLET
+   768px AND BELOW
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .about-page-container {
+    padding: 24px 16px 50px;
+    max-width: 100%;
+  }
+
+  .about-page-title {
+    font-size: clamp(24px, 5vw, 34px);
+  }
+
+  .about-page-lead {
+    font-size: 16px;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    );
+    gap: 12px;
+  }
+
+  .about-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .about-card-title {
+    font-size: 18px;
+  }
+
+  .about-card-text {
+    font-size: 14px;
+  }
+
+  .about-claims {
+    font-size: 14px;
+  }
+
+  .about-section-eyebrow {
+    margin: 28px 0 6px !important;
+  }
+
+  .about-section-title {
+    font-size: clamp(19px, 4vw, 24px);
+    margin: 0 0 12px;
+  }
+
+  .about-step-card {
+    padding: 16px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+
+  .step-nr {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+
+  .step-text {
+    font-size: 14px;
+  }
+
+  .about-info-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .about-info-title {
+    font-size: 18px;
+  }
+
+  .about-info-content {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .about-notice {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   480px AND BELOW
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-page-container {
+    padding: 20px 14px 40px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .about-page-title {
+    font-size: clamp(22px, 6vw, 30px);
+    margin: 4px 0 10px;
+  }
+
+  .about-page-lead {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .about-card-title {
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+
+  .about-card-text {
+    font-size: 13.5px;
+  }
+
+  .about-claims {
+    font-size: 13.5px;
+  }
+
+  .about-section-eyebrow {
+    margin: 24px 0 6px !important;
+    font-size: 11px;
+  }
+
+  .about-section-title {
+    font-size: clamp(18px, 5vw, 22px);
+    margin: 0 0 10px;
+  }
+
+  .about-step-card {
+    padding: 14px;
+    border-radius: 10px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step-nr {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    align-self: flex-start;
+  }
+
+  .step-text {
+    font-size: 13.5px;
+    margin-top: 4px;
+  }
+
+  .about-link {
+    font-size: 13.5px;
+  }
+
+  .about-info-card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .about-info-title {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .about-info-content {
+    font-size: 13.5px;
+    gap: 6px;
+  }
+
+  .about-notice {
+    font-size: 11.5px;
+    margin-top: 14px !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   360px AND BELOW
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .about-page-container {
+    padding: 18px 12px 36px;
+  }
+
+  .eyebrow {
+    font-size: 10.5px;
+    letter-spacing: 1.5px;
+  }
+
+  .about-page-title {
+    font-size: clamp(20px, 7vw, 28px);
+  }
+
+  .about-page-lead {
+    font-size: 14.5px;
+  }
+
+  .about-card {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .about-card-title {
+    font-size: 16px;
+  }
+
+  .about-card-text {
+    font-size: 13px;
+  }
+
+  .about-claims {
+    font-size: 13px;
+  }
+
+  .about-section-title {
+    font-size: clamp(17px, 6vw, 21px);
+  }
+
+  .about-step-card {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .step-nr {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .step-text {
+    font-size: 13px;
+  }
+
+  .about-info-card {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .about-info-title {
+    font-size: 16px;
+  }
+
+  .about-info-content {
+    font-size: 13px;
+  }
+
+  .about-notice {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL DEVICES
+   320px AND BELOW
+   ========================================================= */
+
+@media (max-width: 320px) {
+
+  .about-page-container {
+    padding: 16px 10px 32px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  .about-page-title {
+    font-size: 20px;
+  }
+
+  .about-page-lead {
+    font-size: 14px;
+  }
+
+  .about-card {
+    padding: 11px;
+  }
+
+  .about-card-title {
+    font-size: 15.5px;
+  }
+
+  .about-card-text {
+    font-size: 12.5px;
+  }
+
+  .about-claims {
+    font-size: 12.5px;
+  }
+
+  .about-section-title {
+    font-size: 17px;
+  }
+
+  .about-step-card {
+    padding: 11px;
+  }
+
+  .step-nr {
+    width: 25px;
+    height: 25px;
+    font-size: 12.5px;
+  }
+
+  .step-text {
+    font-size: 12.5px;
+  }
+
+  .about-info-card {
+    padding: 11px;
+  }
+
+  .about-info-title {
+    font-size: 15.5px;
+  }
+
+  .about-info-content {
+    font-size: 12.5px;
+  }
+
+  .about-notice {
+    font-size: 10.5px;
+  }
+}
+
+/* =========================================================
+   LARGE SCREENS
+   Existing desktop behavior preserved
+   ========================================================= */
+
+@media (min-width: 1920px) {
+
+  .about-page-container {
+    max-width: 820px;
+  }
+}
+
+/* =========================================================
+   ULTRA-WIDE
+   Existing behavior preserved
+   ========================================================= */
+
+@media (min-width: 2560px) {
+
+  .about-page-container {
+    max-width: 900px;
+  }
+}
+
+/* =========================================================
+   FOCUS STYLES
+   ========================================================= */
+
+.about-link:focus {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.about-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.about-link:focus-visible {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  .about-page-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .about-card,
+  .about-step-card,
+  .about-info-card {
+    border: 1px solid var(--linie);
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}

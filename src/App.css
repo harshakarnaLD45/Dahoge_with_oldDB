@@ -1,0 +1,493 @@
+/* App Styles - Matching existing website */
+
+:root {
+  --serif: Georgia, "Iowan Old Style", "Palatino Linotype",
+    "Times New Roman", serif;
+
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --kobalt: #1f3c8f;
+  --kobalt-dunkel: #16295f;
+  --tinte: #131c33;
+
+  --porzellan: #f5f3ec;
+  --papier: #ffffff;
+
+  --eiche: #7c5230;
+  --eiche-hell: #9a6c42;
+  --honig: #d9a441;
+
+  --linie: #dad4c6;
+  --moos: #4c7a4f;
+
+  /* ONE SHARED WIDTH */
+  --header-max-width: 1440px;
+
+  --header-padding: clamp(12px, 2vw, 32px);
+
+  --logo-width: clamp(180px, 24vw, 400px);
+}
+.site-container {
+  width: 100%;
+  max-width: var(--header-max-width);
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+  width: 100%;
+  max-width: var(--header-max-width);
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  background: var(--porzellan);
+  color: var(--tinte);
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+
+  -webkit-font-smoothing: antialiased;
+
+  position: relative;
+  z-index: 100;
+}
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--porzellan);
+  color: var(--tinte);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.page-content {
+  padding: 20px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--porzellan);
+  color: var(--tinte);
+}
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  min-width: 0;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tinte);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: var(--sans);
+  color: var(--tinte);
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 8px;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--kobalt);
+}
+
+.input.field-err {
+  border-color: #b4443c;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 0;
+}
+
+/* =========================================================
+   HEADLINES (SERIF)
+   ========================================================= */
+
+.f-display {
+  font-family: var(--serif);
+  font-weight: 600;
+}
+
+/* =========================================================
+   EYEBROW (SUBHEADINGS)
+   ========================================================= */
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--eiche);
+}
+
+/* =========================================================
+   LEAD PARAGRAPHS
+   ========================================================= */
+
+.lead {
+  font-size: 17px;
+  max-width: 52ch;
+  color: #3a4258;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   NOTICE TEXT
+   ========================================================= */
+
+.notice {
+  font-size: 12.5px;
+  color: #6a7288;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CHIP (TAB SWITCHER)
+   ========================================================= */
+
+.chip {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  min-width: 68px;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--tinte);
+  background: var(--linie);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.chip.on,
+.chip:hover {
+  background: var(--kobalt);
+  color: #fff;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-height: 36px;
+  min-width: 80px;
+}
+
+.btn-sm {
+  font-size: 13px;
+  padding: 6px 12px;
+  min-height: 30px;
+  min-width: 60px;
+  border-radius: 6px;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+}
+
+.btn-ghost:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.btn-primary {
+  background: var(--kobalt);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--kobalt-dunkel);
+  opacity: 0.9;
+}
+
+.btn-primary:focus {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn:focus,
+.chip:focus {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.btn:focus:not(:focus-visible),
+.chip:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.btn:focus-visible,
+.chip:focus-visible {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   LOADING STATE
+   ========================================================= */
+
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 60px;
+}
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+   ========================================================= */
+
+@media (max-width: 1024) {
+  .form-grid {
+    gap: 12px;
+  }
+
+  .label {
+    font-size: 12.5px;
+  }
+
+  .input {
+    padding: 9px 11px;
+    font-size: 13.5px;
+  }
+
+  .chip {
+    font-size: 12.5px;
+    padding: 5px 12px;
+  }
+
+  .btn-sm {
+    padding: 5px 10px;
+    min-height: 28px;
+    border-radius: 5px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   768px AND BELOW
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .form-grid {
+    gap: 12px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .input {
+    padding: 9px 11px;
+    font-size: 13.5px;
+  }
+
+  .chip {
+    font-size: 12px;
+    padding: 5px 10px;
+    min-width: 60px;
+    height: 28px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .btn-sm {
+    font-size: 12px;
+    padding: 4px 8px;
+    min-height: 26px;
+    min-width: 50px;
+  }
+
+  .notice {
+    font-size: 11.5px;
+  }
+
+  .card {
+    padding: 14px;
+    border-radius: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   480px AND BELOW
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .form-grid {
+    gap: 10px;
+  }
+
+  .label {
+    font-size: 11.5px;
+  }
+
+  .input {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .chip {
+    font-size: 11px;
+    padding: 4px 9px;
+    min-width: 55px;
+    height: 26px;
+  }
+
+  .lead {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .btn-sm {
+    font-size: 11px;
+    padding: 3px 7px;
+    min-height: 24px;
+    min-width: 45px;
+  }
+
+  .notice {
+    font-size: 10.5px;
+  }
+
+  .card {
+    padding: 12px;
+    border-radius: 8px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   360px AND BELOW
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .form-grid {
+    gap: 8px;
+  }
+
+  .label {
+    font-size: 10.5px;
+  }
+
+  .input {
+    padding: 7px 9px;
+    font-size: 12.5px;
+  }
+
+  .chip {
+    font-size: 10px;
+    padding: 3px 8px;
+    min-width: 50px;
+    height: 24px;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  .btn-sm {
+    font-size: 10px;
+    padding: 2px 6px;
+    min-height: 22px;
+    min-width: 40px;
+  }
+
+  .notice {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+
+  .card {
+    padding: 10px;
+    border-radius: 6px;
+  }
+}

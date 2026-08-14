@@ -1,0 +1,1169 @@
+/* =========================================================================
+   HOST AREA — fluid responsive stylesheet, 320px – 2560px
+   Same classnames/markup as before. Rules are consolidated: every class is
+   defined exactly once (plus breakpoint overrides only where the LAYOUT
+   needs to change), using clamp() for smooth scaling in between so nothing
+   suddenly "jumps" or fights an earlier rule with !important.
+   ========================================================================= */
+
+.tabpanel {
+  padding-bottom: clamp(28px, 4vw, 40px);
+}
+
+.mt-wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: clamp(0px, 2vw, 12px);
+  padding-right: clamp(0px, 2vw, 12px);
+  color: var(--tinte);
+}
+
+@media (min-width: 1920px) {
+  .mt-wrap {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .mt-wrap {
+    max-width: 1360px;
+  }
+}
+
+/* =========================================================
+   HOST HEADER
+   ========================================================= */
+
+.mt-wrap > div:first-child {
+  width: 100%;
+}
+
+.mt-wrap .eyebrow {
+  margin: 0 0 6px;
+  color: var(--eiche);
+  font-size: clamp(11px, 1vw, 12px);
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.mt-wrap .f-display {
+  font-family: var(--serif);
+  font-weight: 600;
+}
+
+/* =========================================================
+   NOTICE
+   ========================================================= */
+
+.mt-wrap .notice {
+  color: #6a7288;
+  font-size: clamp(10.5px, 1vw, 12.5px);
+  line-height: 1.5;
+}
+
+.mt-wrap .notice b {
+  color: var(--tinte);
+}
+
+/* =========================================================
+   TABBAR
+   ========================================================= */
+
+.mt-wrap .tabbar {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--linie);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.mt-wrap .tab {
+  all: unset;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #6a7288;
+  padding: clamp(7px, 1vw, 10px) clamp(9px, 1.2vw, 14px);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  font-family: var(--sans);
+  font-size: clamp(11.5px, 1.1vw, 14px);
+  font-weight: 500;
+  flex: 0 0 auto;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.mt-wrap .tab:hover {
+  color: var(--tinte);
+}
+
+.mt-wrap .tab.on {
+  color: var(--kobalt-dunkel);
+  border-bottom-color: var(--kobalt);
+}
+
+.mt-wrap .tab:focus,
+.mt-wrap .btn:focus,
+.mt-wrap .chip:focus,
+.mt-wrap .slot-time-chip:focus {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+}
+
+.mt-wrap .tab:focus:not(:focus-visible),
+.mt-wrap .btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.mt-wrap .tab:focus-visible,
+.mt-wrap .btn:focus-visible,
+.mt-wrap .chip:focus-visible,
+.mt-wrap .slot-time-chip:focus-visible {
+  outline: 2px solid var(--kobalt);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   TAB PANEL
+   ========================================================= */
+
+.mt-wrap .tabpanel {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.mt-wrap .card {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: clamp(8px, 1vw, 18px);
+}
+
+/* =========================================================
+   LABELS
+   ========================================================= */
+
+.mt-wrap .label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--tinte);
+  font-size: clamp(10.5px, 1vw, 13px);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.mt-wrap .input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: clamp(7px, 0.8vw, 12px) clamp(9px, 1vw, 14px);
+  font-size: clamp(12.5px, 1vw, 15px);
+  font-family: var(--sans);
+  color: var(--tinte);
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 8px;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.mt-wrap .input:focus {
+  outline: none;
+  border-color: var(--kobalt);
+  box-shadow: 0 0 0 3px rgba(24, 59, 112, 0.08);
+}
+
+.mt-wrap .input::placeholder {
+  color: #999eaa;
+}
+
+.mt-wrap .input.field-err {
+  border-color: #b4443c;
+}
+
+.mt-wrap .field-error {
+  margin-top: 4px;
+  color: #b4443c;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.mt-wrap .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(8px, 1vw, 14px);
+  min-width: 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .mt-wrap .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.mt-wrap .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 80px;
+  min-height: clamp(32px, 3vw, 40px);
+  padding: clamp(6px, 0.8vw, 10px) clamp(12px, 1.4vw, 20px);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: clamp(12.5px, 1vw, 15px);
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+@media (max-width: 480px) {
+  .mt-wrap .btn {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .mt-wrap .btn {
+    min-height: 32px;
+  }
+}
+
+/* =========================================================
+   SMALL BUTTONS
+   ========================================================= */
+
+.mt-wrap .btn-sm {
+  min-width: clamp(45px, 5vw, 80px);
+  min-height: clamp(22px, 2.6vw, 32px);
+  padding: clamp(2px, 0.5vw, 6px) clamp(7px, 1vw, 12px);
+  border-radius: 6px;
+  font-size: clamp(10px, 0.9vw, 13px);
+}
+
+/* =========================================================
+   PRIMARY / GHOST / DANGER BUTTON
+   ========================================================= */
+
+.mt-wrap .btn-primary {
+  background: var(--kobalt);
+  border: none;
+  color: #fff;
+}
+
+.mt-wrap .btn-primary:hover {
+  background: var(--kobalt-dunkel);
+  opacity: 0.9;
+}
+
+.mt-wrap .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mt-wrap .btn-ghost {
+  background: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+}
+
+.mt-wrap .btn-ghost:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.mt-wrap .btn-danger {
+  background: #b4443c;
+  border: none;
+  color: #fff;
+  width: 30px;
+  height: 20px;
+  border-radius: 12px;
+}
+
+.mt-wrap .btn-danger:hover {
+  background: #96362f;
+  opacity: 0.95;
+}
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.modal-box {
+  max-width: 420px;
+  width: 100%;
+}
+
+/* =========================================================
+   RESERVATIONS
+   ========================================================= */
+
+.mt-wrap .mt-section {
+  background: #ffffff;
+  border: 1px solid #ddd5c8;
+  border-radius: clamp(8px, 1vw, 14px);
+  padding: clamp(12px, 2vw, 26px);
+  box-shadow: 0 8px 22px rgba(32, 42, 65, 0.08);
+  box-sizing: border-box;
+}
+
+.mt-wrap .mt-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: clamp(12px, 1.5vw, 16px);
+}
+
+@media (max-width: 768px) {
+  .mt-wrap .mt-section-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mt-wrap .mt-section-head .btn {
+    align-self: flex-start;
+  }
+}
+
+.mt-wrap .mt-section-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(14px, 1.4vw, 19px);
+  line-height: 1.3;
+  color: var(--kobalt-dunkel, #14315c);
+  margin: 0 0 4px;
+}
+
+.mt-wrap .mt-section-title.lg {
+  margin: 0 0 5px;
+  font-size: clamp(17px, 2vw, 23px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: #14315c;
+}
+
+.mt-wrap .mt-section-subtitle {
+  margin: 0;
+  color: #71809a;
+  font-size: clamp(10.5px, 0.95vw, 12.5px);
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.mt-wrap .count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #eef0f5;
+  color: #34415a;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mt-wrap .mt-section-body {
+  display: grid;
+  gap: clamp(12px, 1.6vw, 16px);
+}
+
+.mt-wrap .mt-section-body > .label:first-child {
+  margin-top: 0;
+}
+
+/* Two-column row inside a section */
+.mt-wrap .mt-row-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(10px, 1.4vw, 16px);
+  align-items: start;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .mt-wrap .mt-row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mt-wrap .static-box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: clamp(8px, 0.9vw, 10px) clamp(9px, 1vw, 12px);
+  font-size: clamp(12.5px, 1vw, 14px);
+  font-family: var(--sans);
+  color: #6a7288;
+  background: var(--sand, #f4f1ea);
+  border: 1px solid var(--linie);
+  border-radius: 8px;
+  line-height: 1.4;
+}
+
+/* Groups */
+
+.mt-wrap .res-groups {
+  width: 100%;
+}
+
+.mt-wrap .res-group {
+  width: 100%;
+}
+
+.mt-wrap .res-group + .res-group {
+  margin-top: 10px;
+}
+
+.mt-wrap .res-group-label {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0 6px;
+  margin: 0 0 10px;
+  border-bottom: 1px solid #e6dfd3;
+  color: #173b70;
+  font-family: var(--sans);
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+.mt-wrap .res-group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+/* Individual reservation row */
+
+.mt-wrap .res-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) 100px;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 58px;
+  box-sizing: border-box;
+  padding: clamp(9px, 1vw, 10px) clamp(10px, 1.1vw, 12px);
+  background: #ffffff;
+  border: 1px solid #e3d9c9;
+  border-radius: 9px;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.mt-wrap .res-row:hover {
+  border-color: #d6c9b7;
+  box-shadow: 0 2px 8px rgba(20, 49, 92, 0.04);
+}
+
+@media (max-width: 900px) {
+  .mt-wrap .res-row {
+    grid-template-columns: 150px minmax(0, 1fr) 90px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .mt-wrap .res-row {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+
+  .mt-wrap .res-time-area {
+    grid-column: 1;
+  }
+
+  .mt-wrap .res-guest-area {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .mt-wrap .res-status {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.mt-wrap .res-time-area {
+  min-width: 0;
+}
+
+.mt-wrap .res-row-time {
+  margin: 0 0 6px;
+  color: #14315c;
+  font-size: clamp(10px, 0.85vw, 11px);
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.mt-wrap .res-chip {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 3px 7px;
+  background: #fffaf3;
+  border: 1px solid #eadcc8;
+  border-radius: 999px;
+  color: #71809a;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.mt-wrap .res-guest-area {
+  min-width: 0;
+}
+
+.mt-wrap .res-guest {
+  margin: 0 0 3px;
+  color: #14315c;
+  font-size: clamp(9.5px, 0.8vw, 10.5px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mt-wrap .res-contact {
+  margin: 1px 0;
+  color: #71809a;
+  font-size: 8px;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 700px) {
+  .mt-wrap .res-contact {
+    white-space: normal;
+  }
+}
+
+.mt-wrap .res-contact a {
+  color: #536f9b;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+}
+
+.mt-wrap .res-contact a:hover {
+  color: #14315c;
+}
+
+.mt-wrap .res-promotion {
+  margin-top: 4px;
+  color: var(--eiche);
+  font-size: 8.5px;
+  line-height: 1.3;
+}
+
+.mt-wrap .res-note {
+  margin-top: 4px;
+  color: #596276;
+  font-size: 8.5px;
+  line-height: 1.3;
+}
+
+.mt-wrap .res-status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.mt-wrap .status-pill.confirmed {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  min-width: 53px;
+  height: 17px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: #eaf6ee;
+  color: #247343;
+  font-size: 7.5px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mt-wrap .status-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #238044;
+  flex-shrink: 0;
+}
+
+.host-signout-btn {
+  width: 188px;
+}
+
+@media (max-width: 550px) {
+  .signoutcontainer{
+  width: 100% !important;
+  display: flex !important;
+  /* align-items: flex-end !important; */
+  justify-self: flex-end !important;
+  /* max-width: 250px !important; */
+  }
+}
+@media (max-width: 480px) {
+  .mt-wrap .res-row-time {
+    font-size: 10px;
+  }
+
+  .mt-wrap .res-guest {
+    font-size: 10px;
+  }
+
+  .mt-wrap .res-contact {
+    font-size: 8px;
+  }
+
+  .mt-wrap .status-pill.confirmed {
+    min-width: 50px;
+    height: 16px;
+    font-size: 7px;
+  }
+}
+
+/* ---------------------------------------------------------
+   Page head: "My Mischtisch" + subtitle
+--------------------------------------------------------- */
+
+.mt-wrap .mt-head {
+  margin-bottom: clamp(12px, 1.6vw, 18px);
+}
+
+.mt-wrap .mt-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(19px, 3.4vw, 28px);
+  line-height: 1.2;
+  color: var(--kobalt-dunkel, #14315c);
+  margin: 0 0 6px;
+}
+
+.mt-wrap .mt-subtitle {
+  margin: 0;
+  color: #6a7288;
+  font-size: clamp(11px, 1vw, 13px);
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------
+   Section list
+--------------------------------------------------------- */
+
+.mt-wrap .mt-sections {
+  display: grid;
+  gap: clamp(10px, 1.6vw, 20px);
+  padding-bottom: clamp(28px, 4vw, 40px);
+}
+
+/* ---------------------------------------------------------
+   Photos drop zone
+--------------------------------------------------------- */
+
+.mt-wrap .photo-drop {
+  border: 1.5px dashed var(--kobalt, #6a86b8);
+  border-radius: 10px;
+  padding: clamp(11px, 1.6vw, 18px);
+  background: rgba(24, 59, 112, 0.03);
+}
+
+.mt-wrap .photo-drop .btn-ghost {
+  border-color: var(--kobalt, #1b3a6b);
+  color: var(--kobalt, #1b3a6b);
+}
+
+.mt-wrap .photo-drop .btn-ghost:hover {
+  background: rgba(24, 59, 112, 0.06);
+}
+
+.mt-wrap .foto-kachel {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid var(--linie);
+  background: var(--papier);
+}
+
+.mt-wrap .foto-kachel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mt-wrap .foto-weg {
+  all: unset;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(20, 49, 92, 0.85);
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.mt-wrap .foto-haupt {
+  all: unset;
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+  box-sizing: border-box;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--kobalt-dunkel, #14315c);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.mt-wrap .foto-haupt.on {
+  background: var(--kobalt-dunkel, #14315c);
+  color: #fff;
+}
+
+/* ---------------------------------------------------------
+   Day chips (DayChips selector)
+--------------------------------------------------------- */
+
+.mt-wrap .chip {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: clamp(74px, 7vw, 96px);
+  height: clamp(34px, 3.6vw, 42px);
+  padding: 0 clamp(11px, 1.4vw, 20px);
+  margin: 0;
+  border: 1px solid var(--kobalt, #1b3a6b);
+  border-radius: 999px;
+  background: var(--papier, #fff);
+  color: var(--kobalt-dunkel, #14315c);
+  font-family: var(--sans);
+  font-size: clamp(11.5px, 1vw, 15px);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  /* Never shrink below the label so the full weekday name stays visible. */
+  flex-shrink: 0;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.mt-wrap .chip.on {
+  background: var(--kobalt-dunkel, #14315c);
+  border-color: var(--kobalt-dunkel, #14315c);
+  color: #fff;
+}
+
+.mt-wrap .chip:hover:not(.on) {
+  background: rgba(20, 49, 92, 0.06);
+  color: var(--kobalt-dunkel, #14315c);
+}
+
+/* Days with existing reservations get an alert-style badge: beige fill,
+   warning border and a red dot, matching the protective banner above. */
+.mt-wrap .chip.protect {
+  background: #f6efdc;
+  border-color: #d8b36a;
+  color: #5b4a2a;
+}
+
+.mt-wrap .chip .chip-dot {
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: #b4763c;
+  flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------
+   Weekly bookable times — per-day cards
+--------------------------------------------------------- */
+
+.mt-wrap .day-slot-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(9px, 1.2vw, 14px);
+  width: 100%;
+  margin-top: 14px;
+}
+
+.mt-wrap .day-slot-card {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  display: block;
+  padding: clamp(11px, 1.4vw, 16px) clamp(11px, 1.6vw, 20px);
+  background: var(--sand, #f7f3ea);
+  border: 1px solid var(--linie);
+  border-radius: clamp(10px, 1vw, 12px);
+}
+
+.mt-wrap .day-slot-label {
+  display: block;
+  width: auto;
+  min-width: 0;
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(12.5px, 1.1vw, 15px);
+  line-height: 1.3;
+  color: var(--kobalt-dunkel, #14315c);
+  white-space: nowrap;
+}
+
+.mt-wrap .day-slot-card > .slot-editor {
+  width: 100%;
+}
+
+/* Keep SlotEditor's inline-styled inner divs full width & fluid */
+.mt-wrap .day-slot-card > div {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+/* =========================================================
+   SLOT EDITOR (interval + time-range controls)
+   ========================================================= */
+
+.mt-wrap .day-slot-card .slot-editor-controls {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(220px, 1.3fr);
+  gap: clamp(8px, 1.2vw, 14px);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.mt-wrap .day-slot-card .slot-editor-controls > div {
+  min-width: 0;
+  width: 100%;
+}
+
+/* SlotEditor sets grid-template-columns as a React inline style, which
+   always wins over an external stylesheet rule of any specificity — so
+   these breakpoint overrides need !important to actually take effect.
+   Without it, the 2-column layout never collapses on narrow screens and
+   forces the whole page to overflow horizontally (chips/cards get clipped
+   at the viewport edge, warning text gets cut off, etc). */
+.mt-wrap .day-slot-card > div > div[style*="grid-template-columns"] {
+  width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  gap: 10px !important;
+}
+
+.mt-wrap .day-slot-card > div > div[style*="grid-template-columns"] > div {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+
+@media (min-width: 601px) {
+  .mt-wrap .day-slot-card .slot-editor-controls,
+  .mt-wrap .day-slot-card > div > div[style*="grid-template-columns"] {
+    grid-template-columns: minmax(180px, 1fr) minmax(220px, 1.3fr) !important;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 601px) {
+  .mt-wrap .day-slot-card .slot-editor-controls,
+  .mt-wrap .day-slot-card > div > div[style*="grid-template-columns"] {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .mt-wrap .day-slot-card .slot-editor-controls,
+  .mt-wrap .day-slot-card > div > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .mt-wrap .day-slot-card .input {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+.mt-wrap .day-slot-card .slot-editor-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.mt-wrap .day-slot-card .slot-editor-field label {
+  font-size: clamp(10px, 0.85vw, 11px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--tinte);
+}
+
+.mt-wrap .day-slot-card .slot-editor-field input,
+.mt-wrap .day-slot-card .slot-editor-field select,
+.mt-wrap .day-slot-card .input {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: clamp(38px, 3.6vw, 43px);
+  box-sizing: border-box;
+  padding: 0 clamp(9px, 1vw, 12px);
+  background: #fff;
+  color: var(--kobalt-dunkel, #14315c);
+  border: 1px solid var(--linie);
+  border-radius: 9px;
+  font-family: var(--sans);
+  font-size: clamp(12.5px, 1vw, 14px);
+  outline: none;
+}
+
+.mt-wrap .day-slot-card .slot-editor-field input:focus,
+.mt-wrap .day-slot-card .slot-editor-field select:focus {
+  border-color: var(--kobalt);
+  box-shadow: 0 0 0 3px rgba(24, 59, 112, 0.08);
+}
+
+.mt-wrap .day-slot-card .slot-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.mt-wrap .day-slot-card .slot-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(36px, 3.5vw, 40px);
+  height: clamp(26px, 2.6vw, 30px);
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-radius: 999px;
+  background: var(--kobalt-dunkel, #14315c);
+  color: #fff;
+  font-size: clamp(10px, 0.85vw, 11px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mt-wrap .day-slot-card .slot-editor-remove {
+  margin-top: 9px;
+  height: 34px;
+  padding: 0 13px;
+  background: #fff;
+  color: #d63c35;
+  border: 1px solid #ef9d9d;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mt-wrap .day-slot-card .slot-editor-remove:hover {
+  background: #fff5f5;
+}
+
+/* Weekly bookable time chips (SlotEditor: TimeRangeSelect items) */
+
+.mt-wrap .slot-time-chip {
+  all: unset;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(48px, 5vw, 58px);
+  height: clamp(30px, 3.2vw, 36px);
+  padding: 0 clamp(8px, 1vw, 12px);
+  border: 1px solid var(--kobalt, #1b3a6b);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--kobalt-dunkel, #14315c);
+  font-family: var(--sans);
+  font-size: clamp(11px, 0.95vw, 13px);
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.mt-wrap .slot-time-chip:hover {
+  background: rgba(20, 49, 92, 0.06);
+  color: var(--kobalt-dunkel, #14315c);
+}
+
+.mt-wrap .slot-time-chip.on {
+  background: var(--kobalt-dunkel, #14315c);
+  border-color: var(--kobalt-dunkel, #14315c);
+  color: #ffffff;
+}
+
+.mt-wrap .slot-time-chip.on:hover {
+  background: var(--kobalt, #1f3c8f);
+  border-color: var(--kobalt, #1f3c8f);
+  color: #ffffff;
+}
+
+.mt-wrap .slot-time-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* =========================================================
+   STICKY SAVE BAR
+   ========================================================= */
+
+.mt-wrap .mt-save-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: clamp(11px, 1.4vw, 14px) clamp(14px, 1.8vw, 20px);
+  background: var(--papier);
+  border: 1px solid var(--linie);
+  border-radius: 14px;
+  box-shadow: 0 -6px 18px rgba(20, 30, 55, 0.06);
+  box-sizing: border-box;
+}
+
+@media (max-width: 360px) {
+  .mt-wrap .mt-save-bar {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .mt-wrap .mt-save-bar .btn {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — GENERAL LAYOUT SWEEP
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .mt-wrap .card {
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mt-wrap .mt-section {
+    border-radius: 10px;
+  }
+
+  .mt-wrap .card {
+    border-radius: 8px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .mt-wrap *,
+  .mt-wrap *::before,
+  .mt-wrap *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}

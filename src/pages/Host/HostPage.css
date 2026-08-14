@@ -1,0 +1,50 @@
+.host-page-container {
+  background: var(--porzellan);
+  color: var(--tinte);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.host-page-container *,
+.host-page-container *::before,
+.host-page-container *::after {
+  box-sizing: border-box;
+}
+
+.host-page-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(26px, 4.5vw, 38px);
+  line-height: 1.06;
+  margin: 6px 0 12px;
+  color: var(--kobalt-dunkel);
+}
+
+.host-lead {
+  font-size: 17px;
+  max-width: 52ch;
+  color: #3a4258;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .host-page-container {
+    max-width: 100%;
+  }
+}
+
+@media print {
+  .host-page-container {
+    max-width: 100%;
+    padding: 0;
+  }
+}

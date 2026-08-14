@@ -1,0 +1,1360 @@
+{
+  "navigation": {
+    "tables": "Tables",
+    "hosts": "Hosts",
+    "about": "About"
+  },
+  "app": {
+    "loadingVenue": "Betrieb wird geladen …",
+    "venueNotFound": "Betrieb nicht gefunden",
+    "venueNotFoundMessage": "Der angeforderte Betrieb konnte nicht gefunden werden."
+  },
+
+  "accessibility": {
+    "goHome": "Go to the home page",
+    "mainNavigation": "Main navigation",
+    "chooseLanguage": "Choose language",
+    "closeNavigation": "Close navigation menu",
+    "openNavigation": "Open navigation menu"
+  },
+  "hostPage": {
+    "eyebrow": "For gastronomy & hospitality",
+    "title": "Host area",
+    "lead": "Sign in or register your venue right here: set up your Mischtisch, manage seats, days and times, and view all reservations with your guests' contact details.",
+    "signIn": "Sign in",
+    "register": "Register",
+    "noAccount": "No account yet? Switch to \"Register\" above — registration takes less than two minutes.",
+    "joinTitle": "Join officially",
+    "joinText": "Participation runs via the signed usage agreement of DEHOGA Bayern — by email with the subject \"MISCHTISCH in SACHSEN\" to info@gastgeber-ag.bayern. Afterwards follows the listing in the Mischtisch finder and the starter package from DEHOGA Sachsen, which covers the costs for Saxon businesses.",
+    "seeSteps": "See all steps →",
+    "signedOut": "Signed out",
+    "loading": "Loading host area …",
+    "venueNotFound": "Your venue could not be loaded — please sign in or register again.",
+    "tableShapeNavigationNotConfigured": "Table shape navigation is not configured."
+  },
+  "host": {
+    "areaLabel": "Host area · {{city}}",
+    "notificationsGoTo": "Notifications go to:",
+    "noEmailOnFile": "— no email on file —",
+    "signOut": "Sign out",
+    "registrationCode": "Registration code",
+    "tabs": {
+      "reservations": "Reservations",
+      "myMischtisch": "My Mischtisch",
+      "profile": "Profile"
+    },
+    "res": {
+      "title": "Reservations",
+      "subtitle": "All current guest reservations, clearly grouped by date.",
+      "notificationsWaitingOne": "1 notification waiting",
+      "notificationsWaitingMany": "{{count}} notifications waiting",
+      "pendingText": "These reservations could not yet be delivered automatically by email. Send them with one click — or add a dispatch address below and it will happen automatically from now on.",
+      "sendNow": "Send now",
+      "done": "Done",
+      "loading": "Loading reservations …",
+      "empty": "No reservations via the platform yet.",
+      "emptyHint": "As soon as a guest books, the reservation appears here — in addition to the email.",
+      "personsOne": "1 Person",
+      "personsMany": "{{count}} People",
+      "chair": "Seat",
+      "chairs": "Seats",
+      "promotion": "★ Promotion: {{aktion}}",
+      "message": "Message: “{{note}}”",
+      "confirmed": "Confirmed"
+    },
+    "cfg": {
+      "title": "My Mischtisch",
+      "subtitle": "Manage your table, bookable times, special dates, promotions and confirmation information.",
+
+      "table": {
+        "title": "Table & seats",
+        "subtitle": "Shape, capacity and optional dimensions for your venue's single Mischtisch.",
+        "setChangeShape": "Set / change table shape",
+        "shapePageError": "The table shape page could not be opened.",
+        "shape": "Table shape",
+        "standardLayout": "Standard layout (rectangular)",
+        "size": "Table size: how many people fit?",
+        "redistribute": "The seats will be redistributed evenly across the chosen table shape ({{shape}}).",
+        "dimensions": "Table dimensions (optional, for our records)",
+        "dimensionsPlaceholder": "e.g. 220 × 90 cm or Ø 140 cm"
+      },
+
+      "photos": {
+        "title": "Photos",
+        "subtitle": "Optional images of your venue and Mischtisch for the guest view."
+      },
+
+      "times": {
+        "title": "Weekly bookable times",
+        "subtitle": "Define the days your Mischtisch is available and the time slots guests can book.",
+        "selectDaysFirst": "Please select Mischtisch days first.",
+        "from": "From",
+        "to": "To",
+        "interval": "Interval",
+        "every30Min": "every 30 min",
+        "everyHour": "every hour",
+        "every90Min": "every 90 min",
+        "every2Hours": "every 2 h",
+        "unavailable": "Unavailable",
+        "addTimeSlots": "Add time slots",
+        "timeSlots": "Time slots",
+        "startTime": "Start time",
+        "endTime": "End time",
+        "invalidRange": "“to” must be after “from”.",
+        "hourSuffix": "",
+        "selectAll": "Select all",
+        "remove": "Remove",
+        "existingReservationTitle": "{{dayName}} has an existing reservation.",
+        "existingReservationText": "Existing bookings remain unchanged. Changes will apply from {{date}}.",
+        "noExistingReservation": "Changes to this day can apply immediately because there are no existing reservations.",
+        "protectionTitle": "Existing reservations stay protected",
+        "protectionText": "If a day already has confirmed reservations, your new times will not change this week's bookings. The changes will apply to that weekday from the following week.",
+        "selectedCount": "{{selected}} of {{total}} selected",
+        "slotCount": "{{count}} time slots",
+        "hourCount": "{{count}} hours",
+        "minutes": "{{count}} min"
+      },
+
+      "specialDates": {
+        "title": "Special dates",
+        "subtitle": "Closure days and special openings that override your weekly schedule."
+      },
+
+      "offers": {
+        "title": "Offers & promotions",
+        "subtitle": "A standing offer plus optional theme weeks guests see while booking.",
+        "allowMultiple": "Allow multiple reservations",
+        "allowMultipleHint": "Guests may book several time slots in one go — your table can be booked multiple times per day.",
+        "permanentOffer": "Permanent special offer at the Mischtisch (optional)",
+        "permanentOfferPlaceholder": "e.g. Mischtisch menu €19.90 incl. drink",
+        "promotionWeeks": "Promotion weeks & extra events",
+        "promotionWeeksHint": "Theme weeks such as “Lusatian fish weeks”, game weeks or asparagus season: enter the period, optionally custom times and a special offer. Guests see the promotion while booking."
+      },
+
+      "changesApply": "Changes apply immediately to new reservations.",
+      "saving": "Saving …",
+      "saveChanges": "Save changes"
+    },
+    "profil": {
+      "title": "Profile",
+      "subtitle": "Manage venue details from your registration and your login credentials.",
+      "venueDetails": "Venue details",
+      "venueName": "Venue name *",
+      "owner": "Owner *",
+      "street": "Street *",
+      "postcode": "Postcode *",
+      "town": "Town *",
+      "region": "Region",
+      "venueType": "Type of venue",
+      "phone": "Phone",
+      "detailsNotice": "These details come from your registration and are shown on the guest page.",
+      "changePassword": "Change password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm password",
+      "pwErrors": {
+        "currentRequired": "Please enter your current password.",
+        "currentWrong": "The current password is incorrect.",
+        "newRequired": "Please enter a new password.",
+        "minLength": "At least 8 characters.",
+        "confirmRequired": "Please repeat the new password.",
+        "mismatch": "The passwords do not match."
+      },
+      "saveProfile": "Save profile"
+    },
+    "toasts": {
+      "fillProfile": "Please fill in the venue name, street, postcode, town and owner.",
+      "emailRequired": "Please provide an email for reservation confirmations.",
+      "dayRequired": "Please choose at least one Mischtisch day.",
+      "slotRequired": "Please set at least one time.",
+      "missingDayTimes": "Please set times for all selected days (missing: {{days}}).",
+      "checkPasswordFields": "Please check the password fields.",
+      "passwordWrong": "The current password is incorrect.",
+      "passwordNotVerified": "The password could not be verified.",
+      "saved": "Mischtisch data saved — visible to guests immediately",
+      "saveFailed": "Saving failed.",
+      "saveFailedWithMessage": "Saving failed: {{message}}",
+      "cancelled": "Cancelled — the guest would be informed by email",
+      "cancelFailed": "Cancelling failed.",
+      "emailSent": "Email sent"
+    },
+    "modal": {
+      "title": "Discard unsaved changes?",
+      "text": "You have changes that haven't been saved yet. If you continue, they will be lost.",
+      "keepEditing": "Keep editing",
+      "discard": "Discard changes"
+    }
+  },
+  "sondertermine": {
+    "errors": {
+      "imageOnly": "Please choose image files only.",
+      "imageProcessing": "The image could not be processed."
+    },
+    "status": {
+      "closed": "closed — guests see “fully booked”",
+      "specialOpening": "Special opening"
+    },
+    "timeSuffix": " ",
+    "types": {
+      "closed": "Closed / day off / holiday",
+      "specialOpening": "Special opening (additional day)"
+    },
+    "form": {
+      "date": "Date",
+      "type": "Type",
+      "bookableFrom": "Bookable from",
+      "to": "to",
+      "interval": "Interval",
+      "internalNote": "Internal note (optional)",
+      "notePlaceholder": "e.g. company holiday, wedding",
+      "image": "Image for the date (optional)",
+      "preview": "Preview"
+    },
+    "intervals": {
+      "every30": "every 30 minutes",
+      "everyHour": "every hour",
+      "every90": "every 90 minutes",
+      "every2Hours": "every 2 hours"
+    },
+    "actions": {
+      "remove": "Remove",
+      "removeImage": "Remove image",
+      "chooseImage": "Choose image",
+      "addDate": "Add date",
+      "applySpecialOpening": "Apply special opening"
+    },
+    "notice": {
+      "closedDays": "Closed days appear as “fully booked” to guests, not as closed."
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Communal tables across Saxony",
+      "titleLine1": "One table",
+      "titleLine2": "that mixes.",
+      "description": "Every participating inn, restaurant and hotel sets exactly one Mischtisch — the table for anyone who would rather not eat alone. Here you book your seat: one place for all of Saxony, from Görlitz to the Vogtland.",
+      "findSeat": "Find a seat",
+      "forHosts": "For hosts",
+      "partnerVenues": "partner venues",
+      "regions": "regions",
+      "oneAccount": "one account",
+      "tableCaption": "This is what mixing looks like: taken, free — and soon you."
+    },
+    "filters": {
+      "allRegions": "All regions",
+      "searchPlaceholder": "Search town or venue …",
+      "searchLabel": "Search"
+    },
+    "empty": "No Mischtisch found. Try another region or search term."
+  },
+  "howMischtischWorks": {
+    "eyebrow": "EASY RESERVATION",
+
+    "title": "How Mischtisch works",
+
+    "steps": {
+      "01": {
+        "title": "Find a host",
+        "text": "Search by place, region or a specific restaurant, café or hotel."
+      },
+
+      "02": {
+        "title": "Choose a time",
+        "text": "Open a host’s availability and choose the date, time and seats there."
+      },
+
+      "03": {
+        "title": "Enter reservation details",
+        "text": "Enter your contact details and the number of seats you need."
+      },
+
+      "04": {
+        "title": "Receive confirmation",
+        "text": "If the requested seats are available, the reservation is confirmed and sent by email."
+      }
+    }
+  },
+  "hostCta": {
+    "eyebrow": "FOR RESTAURANTS, CAFÉS, HOTELS & MORE",
+
+    "title": "Make open seats visible.",
+
+    "description": "As a host, manage your venue’s single Mischtisch, set its capacity and bookable times, and receive reservations directly through the platform.",
+
+    "login": "Host login",
+
+    "features": {
+      "manageTimes": {
+        "title": "Manage times",
+        "text": "Keep bookable days and time windows clear and up to date."
+      },
+
+      "capacity": {
+        "title": "Set capacity",
+        "text": "Define the number of seats at your Mischtisch flexibly."
+      },
+
+      "reservations": {
+        "title": "View reservations",
+        "text": "See guest details and booked seats in one place."
+      }
+    }
+  },
+  "venue": {
+    "date": "Date",
+    "time": "Time",
+    "hour": "",
+    "navigation": {
+      "allTables": "← All tables"
+    },
+    "seats": {
+      "oneTable": "seats · one table"
+    },
+    "gallery": {
+      "image": "Image",
+      "of": "of",
+      "show": "show"
+    },
+    "promotion": {
+      "today": "Promotion on this day",
+      "upcoming": "Upcoming promotion week",
+      "daily": " · bookable daily during this period"
+    },
+    "closed": {
+      "title": "Day off",
+      "message": "{{venue}} is closed on this day.",
+      "noTable": "{{venue}} does not set the Mischtisch on this day.",
+      "tableDays": "Mischtisch days here:"
+    },
+    "fullyBooked": "sold out",
+    "fullyBookedMessage": "All seats for this date are taken. Please choose another date.",
+    "multipleSlots": " — multiple time slots selectable",
+    "specialDate": "Special date",
+    "specialOpening": "Special opening",
+    "specialClosed": "Closed — guests see \"sold out\"",
+    "specialNotice": "Special date — the Mischtisch is additionally available on this day.",
+    "specialImage": "Image for the special date",
+    "multipleBookingNotice": "Your seats will be reserved for all {{count}} selected time slots.",
+    "provisionalNotice": "Provisional default times — the venue confirms seats, days and times in the host area.",
+    "freeSeats": "{{free}} of {{total}} seats free",
+    "selectChair": "Tap free seats — each selected seat stands for one person.",
+    "contact": {
+      "title": "Your contact details",
+      "onePerson": "Reservation for 1 person",
+      "multiplePeople": "Reservation for {{count}} people"
+    },
+    "form": {
+      "firstName": "First name *",
+      "firstNamePlaceholder": "Anna",
+      "lastName": "Last name *",
+      "lastNamePlaceholder": "Example",
+      "email": "Email address *",
+      "emailPlaceholder": "anna@example.com",
+      "phone": "Phone number *",
+      "phonePlaceholder": "0351 1234567",
+      "street": "Street and house number",
+      "streetPlaceholder": "Sample Street 12",
+      "postcode": "Postcode and city",
+      "postcodePlaceholder": "01067 Dresden",
+      "optional": "(optional)",
+      "message": "Message to the host (optional)",
+      "messagePlaceholder": "e.g. vegetarian, arriving a bit later …",
+      "consent": "I agree that my details will be stored for processing this reservation and sent to {{venue}}. *",
+      "privacy": "Privacy notice"
+    },
+    "validation": {
+      "consent": "Please agree to the processing of your details.",
+      "required": "Please fill in all required fields (*) completely.",
+      "selectChair": "Please select at least one Seat in the table plan above."
+    },
+    "booking": {
+      "booking": "Booking  …",
+      "bookNow": "Book now",
+      "slot": "Slot",
+      "seat": "Seat"
+    },
+    "people": {
+      "single": "{{count}} person",
+      "multiple": "{{count}} people"
+    },
+    "confirmation": {
+      "title": "You're sitting at the table",
+      "oneSeat": "1 Seat",
+      "multipleSeats": "{{count}} Seats",
+      "atTable": "at the Mischtisch at",
+      "hour": "",
+      "chair": "Seat",
+      "print": "save as PDF",
+      "calendar": "Add to calendar",
+      "moreTables": "View more tables"
+    },
+    "toast": {
+      "testMode": "Seat reserved — emails captured in test mode (no real delivery)",
+      "emailsSent": "Seat reserved — emails sent",
+      "venueNotified": "Seat reserved — venue notified",
+      "booked": "Seat reserved",
+      "error": "That didn't work — please try again."
+    }
+  },
+  "tablePlan": {
+    "planWithSeats": "Table plan with {{count}} seats",
+    "seatAction": "Seat {{seat}} {{action}}",
+    "select": "select",
+    "deselect": "deselect",
+    "seatTaken": "Seat {{seat}} taken",
+    "legend": {
+      "free": "free",
+      "taken": "taken",
+      "yourSeat": "your seat"
+    },
+    "seatsFree": "{{free}} of {{total}} seats free"
+  },
+  "table": {
+    "seats": "seats",
+    "customLayout": "Custom layout",
+    "shapes": {
+      "round": "Round",
+      "square": "Square",
+      "rectangular": "Rectangular"
+    },
+    "environment": {
+      "kitchen": "Kitchen",
+      "entrance": "Entrance",
+      "window": "Window",
+      "counterBar": "Counter / bar",
+      "terrace": "Terrace",
+      "wall": "Wall",
+      "tiledStove": "Tiled stove",
+      "garden": "Garden"
+    },
+    "presets": {
+      "E6": "Rectangular · 6 seats (3+3)",
+      "E8": "Rectangular · 8 seats (4+4)",
+      "E8S": "Rectangular · 8 with head seats",
+      "E10": "Rectangular · 10 seats (5+5)",
+      "E10S": "Rectangular · 10 with head seats",
+      "E12": "Long table · 12 seats",
+      "Q8": "Square · 8 seats",
+      "R6": "Round · 6 seats",
+      "R8": "Round · 8 seats",
+      "R10": "Round · 10 seats"
+    }
+  },
+  "locCard": {
+    "noImage": "No image available",
+    "promotion": "Promotion",
+    "offer": "Special Offer",
+    "notBookable": "Not yet bookable",
+    "chooseSeat": "Choose a seat"
+  },
+
+  "dates": {
+    "daily": "Daily",
+    "days": {
+      "short": {
+        "sunday": "Sun",
+        "monday": "Mon",
+        "tuesday": "Tue",
+        "wednesday": "Wed",
+        "thursday": "Thu",
+        "friday": "Fri",
+        "saturday": "Sat"
+      },
+      "long": {
+        "sunday": "Sunday",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday"
+      }
+    },
+    "months": {
+      "january": "January",
+      "february": "February",
+      "march": "March",
+      "april": "April",
+      "may": "May",
+      "june": "June",
+      "july": "July",
+      "august": "August",
+      "september": "September",
+      "october": "October",
+      "november": "November",
+      "december": "December"
+    }
+  },
+
+  "auth": {
+    "email": "Email address",
+    "password": "Password",
+    "login": {
+      "email": "Email address",
+      "password": "Password",
+      "emailPlaceholder": "anna@example.com",
+      "signIn": "Sign in",
+      "checking": "Checking …",
+      "required": "Please enter required details.",
+      "invalidEmail": "Please enter a valid email address.",
+      "incorrectCredentials": "Incorrect email or password.",
+      "failed": "Sign in failed. Please try again.",
+      "welcomeBack": "Welcome back!"
+    },
+    "register": {
+      "venue": "Your venue",
+      "yourVenue": "Your venue",
+      "venuePlaceholder": "e.g. Golden Lion Inn",
+      "street": "Street and number *",
+      "streetPlaceholder": "Sample Street 12",
+      "postcode": "Postcode *",
+      "town": "Town *",
+      "region": "Region",
+      "venueType": "Type of venue",
+      "description": "Short description (visible to guests)",
+      "descriptionPlaceholder": "Short description for guests",
+      "owner": "Owner / leaseholder *",
+      "ownerPlaceholder": "John Doe",
+      "email": "Email (account & confirmations) *",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "0351 1234567",
+      "register": "Register & get started",
+      "registering": "Registering …",
+      "success": "Registration successful!",
+      "failed": "Registration failed. Please try again.",
+      "emailInUse": "This email address is already registered. Please sign in with your existing account.",
+      "saved": "Registration saved",
+      "accountFor": "Account for",
+      "accountCreated": "created. Sign in from now on with",
+      "testConfirmation": "Confirmation email in test mode: ",
+      "confirmationSent": "Confirmation email sent.",
+      "confirmationFailed": "Confirmation email could not be sent.",
+      "confirmationSending": "Sending confirmation email …",
+      "underReview": "Your registration is under review.",
+      "reviewMessage": "After review you will receive your starter package from DEHOGA Sachsen.",
+      "testMode": "Test mode:",
+      "viewTestEmail": "View test email",
+      "backHome": "Back to home",
+      "usageAgreement": "I have read and agree to the usage agreement.",
+      "seeSteps": "View steps",
+      "privacyAgreement": "I have read the privacy notice and agree to the processing of my details.",
+      "privacyNotice": "Privacy notice",
+      "requiredFields": "Please fill in all required fields.",
+      "confirmAgreement": " Confirm the usage agreement.",
+      "agreePrivacy": " Agree to the privacy notice.",
+      "prototype": "Prototype — details will be forwarded to DEHOGA Sachsen."
+    }
+  },
+  "about": {
+    "eyebrow": "The idea",
+    "title": "One table that mixes",
+    "lead": "The Mischtisch was developed by DEHOGA Bayern as a statewide campaign for a living pub culture. This platform brings the idea to Saxony and adds what was missing so far: one central online booking system for every participating venue.",
+
+    "cards": {
+      "oneTable": {
+        "title": "One table per house",
+        "text": "Every participating venue — inn, restaurant or hotel — sets exactly one communal table under the shared brand and enters itself how many people fit around it."
+      },
+      "seatsNotTables": {
+        "title": "Seats, not tables",
+        "text": "At a Mischtisch you book a Seat, not a table. Whoever comes simply joins in — alone, as a couple, or on the spur of the moment."
+      },
+      "oneAccount": {
+        "title": "One account, all of Saxony",
+        "text": "Every Mischtisch in the state runs through one central platform. Guest and venue each receive an automatic email confirmation for every booking."
+      }
+    },
+
+    "campaignClaims": {
+      "prefix": "The campaign's official claims:",
+      "claimOne": "\"Share tables. Mix people.\"",
+      "and": "and",
+      "claimTwo": "\"Eating together is better.\""
+    },
+
+    "join": {
+      "eyebrow": "Joining in — how it works",
+      "title": "Four steps into the MischTisch family"
+    },
+
+    "steps": {
+      "step1": {
+        "title": "Fill out and sign the usage agreement",
+        "textBeforeEmail": "Fill out the DEHOGA Bayern usage agreement with the business contact details, sign it and send it with the subject \"MISCHTISCH in SACHSEN\" by email to",
+        "textAfterEmail": ". Alternatively by post to: DEHOGA Bayern e. V., Fachbereich Gastronomie, MISCHTISCH in SACHSEN, Türkenstraße 7, 80333 Munich."
+      },
+
+      "step2": {
+        "title": "Entry in the \"Mischtisch\" Finder",
+        "textBeforeLink": "Once the agreement is received, the business is listed in the \"Mischtisch\" Finder on",
+        "textAfterLink": " — the map where guests find all participating venues."
+      },
+
+      "step3": {
+        "title": "Starter package from DEHOGA Saxony",
+        "text": "The starter package comes directly from DEHOGA Saxony — the costs have already been covered by the state association for Saxon businesses."
+      },
+
+      "step4": {
+        "title": "The mixing can begin",
+        "text": "The starter package is the basis for setting up your own Mischtisch. Afterwards, the table can be activated here on the platform with seats, days and times for reservations."
+      }
+    },
+
+    "goodToKnow": {
+      "title": "Good to know — from the usage agreement",
+      "item1": "\"Mischtisch\" is a protected word and word-figurative mark; trademark owner is DEHOGA Bayern. The brand templates from Annex 1 must not be altered or distorted.",
+      "item2": "The usage fee is covered by the starter package (90 € gross for association members, 120 € for non-members) — for Saxon businesses, DEHOGA Saxony covers these costs.",
+      "item3": "Every participating business serves every person at the Mischtisch — regardless of nationality, skin colour or gender. The innkeeper's house rights remain unaffected.",
+      "item4": "The agreement runs indefinitely and can be terminated by the business with a notice period of four weeks to the end of the month."
+    },
+
+    "notice": "Prototype / concept draft — the businesses and email addresses in the table overview are sample data. Basis of participation information: Usage agreement \"Mischtisch\" of DEHOGA Bayern (as of October 2024) incl. Annex 1 as well as the official processing steps for \"MISCHTISCH in SACHSEN\". For the live launch, the original brand templates from Annex 1 must be used unchanged."
+  },
+  "beleg": {
+    "ReservationConfirmation": "Reservation Confirmation",
+    "Number": "No.",
+    "Venue": "Venue",
+    "Date": "Date",
+    "Time": "Time",
+    "ClockSuffix": "o'clock",
+    "People": "People",
+    "OnePerson": "1 person",
+    "ManyPeople": "{{count}} people",
+    "Chair": "Table seat",
+    "Guest": "Guest",
+    "Contact": "Contact",
+    "Address": "Address",
+    "Promotion": "Promotion",
+    "Message": "Message",
+    "VenueReachable": "Venue contact",
+    "Footnote": "Please arrive on time for your reservation."
+  },
+  "aktionen": {
+    "validation": {
+      "invalidDateRange": "The “to” date cannot be before the “from” date."
+    },
+    "time": {
+      "hour": " hour"
+    },
+    "dailyBookable": "bookable daily",
+    "remove": "Remove",
+    "form": {
+      "title": "Title of the promotion",
+      "titlePlaceholder": "e.g. Lusatian fish weeks",
+      "from": "From",
+      "to": "To",
+      "specialOffer": "Special offer (visible to guests)",
+      "specialOfferPlaceholder": "e.g. fish platter at the Mischtisch, €24 p.p.",
+      "bookableFrom": "Bookable from",
+      "interval": "Interval"
+    },
+    "dailyPeriod": "During this period",
+    "daily": "daily",
+    "dailyDescription": "bookable — also on days without a regular Mischtisch (days off stay closed).",
+    "customTimes": "Custom times for the promotion (otherwise the regular times apply).",
+    "intervals": {
+      "every30": "30 min",
+      "every60": "60 min",
+      "every90": "90 min",
+      "every120": "120 min"
+    },
+    "notice": "Promotions are shown to guests with title, period and offer — and are included in the confirmation and email.",
+    "add": "Add promotion"
+  },
+
+  "chairEditor": {
+    "arrangeSeats": "Arrange seats",
+    "addSeat": "Add seat {{number}}",
+    "removeSeat": "Remove seat {{number}}"
+  },
+  "emailCard": {
+    "demoDispatch": "Demo-Versand",
+    "from": "Von",
+    "to": "An",
+    "subject": "Betreff"
+  },
+
+  "photoUploader": {
+    "errors": {
+      "imagesOnly": "Please choose image files only.",
+      "tooLarge": "The file “{{fileName}}” is too large (max. 1 MB).",
+      "processing": "The image “{{fileName}}” could not be processed."
+    },
+    "success": {
+      "replaced": "Photo replaced.",
+      "added": "Photo added."
+    },
+    "alt": {
+      "venuePhoto": "Venue photo"
+    },
+    "remove": "Remove photo",
+    "coverImage": "Cover image",
+    "makeCover": "Set as cover",
+    "notice": {
+      "limit": "Maximum 1 photo, original max. 1 MB.",
+      "compression": "Images are compressed automatically."
+    },
+    "buttons": {
+      "processing": "Processing …",
+      "replace": "Replace photo",
+      "choose": "Choose photo"
+    }
+  },
+  "tableForm": {
+    "back": "Back",
+
+    "eyebrow": "For partner venues",
+
+    "title": "Your Mischtisch: Shape & Seats",
+
+    "description": "Tell us what your Mischtisch looks like: whether it is round or rectangular, how many people sit at it, and how the seats are arranged. Choose one of the available variants or arrange the seats yourself and create a custom layout. Your entries appear directly in the booking table plan.",
+
+    "venue": {
+      "label": "Your venue",
+      "choose": "Choose venue",
+      "notListed": "My venue is not in the list",
+      "namePlaceholder": "Venue name",
+      "nameLabel": "Venue name"
+    },
+
+    "contact": {
+      "label": "Your email for queries (optional)",
+      "placeholder": "booking@your-venue.example"
+    },
+
+    "variants": {
+      "label": "Choose a variant — or arrange it yourself",
+      "custom": "Arrange yourself"
+    },
+
+    "preview": {
+      "label": "Preview — this is how guests see your table"
+    },
+
+    "custom": {
+      "description": "Custom layout: choose a basic shape, then tap the dashed positions to add or remove seats.",
+      "rectangular": "Rectangular",
+      "round": "Round",
+      "seat": "seat",
+      "seats": "seats",
+      "set": "set"
+    },
+
+    "surroundings": {
+      "description": "Table surroundings (optional): what is located on each side? This lets us show the kitchen, entrance, and other surroundings as well.",
+      "top": "Above the table",
+      "bottom": "Below the table",
+      "left": "Left of the table",
+      "right": "Right of the table",
+      "nothing": "Nothing",
+      "notice": "These entries appear as labels around the table plan, including for guests during booking."
+    },
+
+    "notes": {
+      "label": "Notes (optional)",
+      "placeholder": "e.g. oak table by the window, bench along the wall"
+    },
+
+    "save": {
+      "notice": "Prototype: entries are visible immediately. In live operation, the team approves them.",
+      "saving": "Saving …",
+      "button": "Save & Send Table Shape"
+    },
+
+    "success": {
+      "title": "Table shape submitted",
+      "inSystem": "The table plan in the booking view now shows exactly this layout.",
+      "notInSystem": "The team will add the venue with this layout.",
+      "sendToTeam": "Send to the Mischtisch team",
+      "done": "Done",
+      "emailNotice": "The button opens your email program with the summary. Enter the team's email address and send it."
+    },
+
+    "toasts": {
+      "selectVenue": "Please select a venue or enter a venue name.",
+      "minimumSeats": "Please set at least 4 seats.",
+      "saved": "Table shape saved",
+      "failed": "Saving failed."
+    },
+
+    "mail": {
+      "subject": "Table shape Mischtisch",
+      "venue": "Venue",
+      "tableShape": "Table shape",
+      "layout": "Layout",
+      "customArrangement": "custom arrangement",
+      "positions": "positions",
+      "chosenVariant": "Chosen variant",
+      "surroundings": "Surroundings",
+      "above": "above",
+      "below": "below",
+      "left": "left",
+      "right": "right",
+      "notes": "Notes",
+      "contact": "Contact for queries",
+      "footer": "— submitted via the Mischtisch table-shape form"
+    }
+  },
+  "footer": {
+    "legal": "Legal",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use & Reservation",
+    "accessibility": "Accessibility",
+
+    "forHosts": "For Hosts",
+    "hostTerms": "Terms for Hosts",
+    "hostPrivacy": "Host Privacy Notice",
+
+    "tagline": "Mischtisch Saxony · 2026",
+
+    "homeAria": "Go to the home page",
+    "legalNavAria": "Legal links",
+    "hostNavAria": "Host links",
+    "logoAlt": "Mischtisch Saxony – DEHOGA Sachsen"
+  },
+  "accessibilityPage": {
+    "eyebrow": "Accessibility & Inclusion",
+    "title": "Accessibility",
+    "lastUpdated": "Last updated: August 2026",
+
+    "ourGoal": {
+      "title": "Our Goal",
+      "text": "Mischtisch Saxony is intended to be perceivable, operable, understandable and robust for as many users as possible. Because consumers can initiate and complete reservations electronically, we take a conservative approach and treat the platform as an e-commerce service for which applicable BFSG/BFSGV requirements should be considered."
+    },
+
+    "serviceDescription": {
+      "title": "Service Description",
+      "text": "The service allows users to find participating hosts, search by region/date, view host information/offers, choose reservation times, reserve multiple seats and receive confirmation. Hosts can sign in to a protected area to manage Mischtisch information."
+    },
+
+    "measures": {
+      "title": "Accessibility Measures",
+      "text": "The redesign should address keyboard operation, visible focus, semantic structure, clear form labels, understandable errors, sufficient contrast, alt text, non-colour-only information, responsive/scalable layouts, logical screen-reader order, clear DE/EN content and accessible authentication/reservation flows."
+    },
+
+    "currentStatus": {
+      "title": "Current Status",
+      "text": "The platform is being redesigned. Accessibility should be tested and documented as part of the relaunch. Until a full assessment is complete, the site should not claim unconditional conformance with a specific WCAG level."
+    },
+
+    "reportBarrier": {
+      "title": "Report a Barrier",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "text": "Please identify the affected page/function, the barrier and, where useful, the device or assistive technology used."
+    }
+  },
+  "imprint": {
+    "eyebrow": "Provider Information",
+    "title": "Imprint",
+    "lastUpdated": "Last updated: August 2026",
+
+    "provider": {
+      "title": "Provider",
+      "company": "DEHOGA Hotel- und Gaststättenverband Sachsen e.V.",
+      "companyShort": "(DEHOGA Sachsen e.V.)",
+      "address": "Tharandter Straße 5",
+      "city": "01159 Dresden",
+      "country": "Germany",
+      "phone": "Phone:",
+      "email": "Email:",
+      "website": "Website:"
+    },
+
+    "representative": {
+      "title": "Authorised Representative",
+      "text": "Represented by the Managing Director (Hauptgeschäftsführer):"
+    },
+
+    "register": {
+      "title": "Register",
+      "text": "Registered in the register of associations.",
+      "court": "Register court: Amtsgericht Dresden",
+      "number": "Registration number: 1104"
+    },
+
+    "mischtisch": {
+      "title": "Mischtisch Saxony",
+      "text1": "Mischtisch Saxony is a reservation-intermediary platform operated by DEHOGA Sachsen e.V. for participating restaurants, cafés, hotels and other hosts.",
+      "text2": "DEHOGA Sachsen e.V. is not the provider of the hospitality services supplied by an individual host. Unless otherwise required by law, the selected host is responsible for its food, drinks, events, opening hours, prices, on-site services and host-provided information."
+    },
+
+    "consumerDispute": {
+      "title": "Consumer Dispute Resolution",
+      "text": "DEHOGA Sachsen e.V. is neither willing nor obliged to participate in dispute-resolution proceedings before a consumer arbitration board."
+    },
+
+    "contentRights": {
+      "title": "Content and Image Rights",
+      "text": "Original content is subject to applicable copyright law. Photos, logos, descriptions and other material supplied by participating hosts remain the responsibility of the respective host. Hosts may upload or publish only material for which they hold the necessary rights."
+    }
+  },
+  "hostPrivacy": {
+    "header": {
+      "label": "For Hosts",
+      "title": "Host Privacy Notice",
+      "updated": "Last updated: August 2026"
+    },
+
+    "contact": {
+      "email": "Email",
+      "phone": "Phone"
+    },
+
+    "sections": {
+      "controller": {
+        "title": "Controller"
+      },
+
+      "hostData": {
+        "title": "Host Data We Process",
+        "intro": "Host registration and use of the protected host area may involve processing of:",
+        "items": [
+          "venue name",
+          "owner/contact person",
+          "address, postcode, town and region",
+          "venue type",
+          "phone number and email address",
+          "authentication/login information",
+          "registration code and account status",
+          "Mischtisch capacity and table/seat configuration",
+          "bookable days and times",
+          "special dates, closure dates and special openings",
+          "uploaded venue images",
+          "promotions, discounts and special offers",
+          "email address used for reservation notifications",
+          "profile/change information",
+          "technical security and log information"
+        ]
+      },
+
+      "purposes": {
+        "title": "Purposes and Legal Bases",
+        "text1": "The data is processed in order to create and manage the host account, verify eligibility to participate, display the public host profile, manage Mischtisch schedules and capacity, transmit reservations, notify the host about reservations, secure the platform and prevent or investigate misuse.",
+        "text2": "Where processing is required for the partner relationship, it is generally based on Article 6(1)(b) GDPR. Necessary security, abuse-prevention and operational processing may be based on Article 6(1)(f) GDPR."
+      },
+
+      "firebaseAuth": {
+        "title": "Firebase Authentication",
+        "text": "Host accounts are authenticated using Google Firebase Authentication. Google states that Firebase Authentication is operated through US data centres. Google provides contractual data-processing and transfer terms for relevant Firebase services."
+      },
+
+      "firestore": {
+        "title": "Cloud Firestore and Cloud Storage for Firebase",
+        "text1": "Profile, schedule, capacity, reservation-related and other platform data may be stored in Cloud Firestore. Host images are stored in Cloud Storage for Firebase.",
+        "text2": "Where technically available, an EU/EEA data location should be configured and documented for Firestore and Cloud Storage."
+      },
+
+      "emailNotifications": {
+        "title": "Email Notifications",
+        "text": "Reservation notifications are technically triggered through EmailJS and sent using a connected Gmail account from Google. This may involve processing the recipient address, reservation information and other message content required for the notification.",
+        "recommendationLabel": "Recommendation:",
+        "recommendation": "A business-managed email account, preferably Google Workspace or another contractually suitable business email service, is recommended for production use."
+      },
+
+      "publicProfile": {
+        "title": "Public Host Profile",
+        "text1": "Information visible to guests may include the venue name, location/region, venue type, public business information, approved images, description, Mischtisch information and public promotions or offers.",
+        "text2": "Login credentials, authentication secrets, security information and internal administrative information are not intended to be public."
+      },
+
+      "guestData": {
+        "title": "Guest Reservation Data",
+        "text1": "Reservation data made available to a host through Mischtisch may be used only in accordance with the Terms for Hosts and applicable data-protection law.",
+        "text2": "For further processing of guest data for the host's own reservation management and hospitality services, the host acts as a separate controller."
+      },
+
+      "retention": {
+        "title": "Recommended Retention",
+        "items": {
+          "account": {
+            "label": "Host account/profile data:",
+            "text": "for the duration of active participation"
+          },
+          "deactivation": {
+            "label": "After final deactivation:",
+            "text": "operational deletion generally within 30 days, unless legal or contractual retention requirements apply"
+          },
+          "images": {
+            "label": "Images/public content:",
+            "text": "until deletion or account deactivation; limited technical backups may remain for a recovery period"
+          },
+          "logs": {
+            "label": "Security logs:",
+            "text": "generally up to 30 days, and longer where required to investigate a concrete security incident"
+          },
+          "claims": {
+            "label": "Legal claims:",
+            "text": "data specifically required to establish, exercise or defend legal claims may be retained for as long as necessary for that purpose"
+          }
+        }
+      },
+
+      "rights": {
+        "title": "Rights",
+        "text1": "Subject to statutory requirements, data subjects may have rights of access, rectification, erasure, restriction of processing, data portability and objection.",
+        "text2": "Requests may be sent to"
+      },
+
+      "complaint": {
+        "title": "Right to Lodge a Complaint",
+        "text": "Data subjects may lodge a complaint with a competent data-protection supervisory authority."
+      },
+
+      "changes": {
+        "title": "Changes to This Notice",
+        "text": "This Host Privacy Notice will be updated if the platform, service providers or processing activities change."
+      }
+    }
+  },
+
+  "privacyPolicy": {
+    "header": {
+      "eyebrow": "Privacy & Data Protection",
+      "title": "Privacy Policy",
+      "updated": "Last updated: August 2026"
+    },
+
+    "contact": {
+      "phone": "Phone",
+      "email": "Email",
+      "dataProtection": "The same email address can be used for data protection inquiries."
+    },
+
+    "labels": {
+      "recommendation": "Recommendation:",
+      "technicalRecommendation": "Technical recommendation:"
+    },
+
+    "links": {
+      "hostingerPrivacy": "Hostinger Privacy Policy",
+      "hostingerDpa": "Hostinger Data Processing Agreement",
+      "emailjsDpa": "EmailJS Data Processing Agreement",
+      "googlePrivacy": "Google Privacy Policy"
+    },
+
+    "sections": {
+      "controller": {
+        "title": "Controller"
+      },
+
+      "general": {
+        "title": "General Principle",
+        "text": "We process personal data only where required to operate the platform, facilitate reservations, manage host accounts, secure the service or comply with legal obligations. Mischtisch Saxony currently does not use advertising or analytics trackers."
+      },
+
+      "hosting": {
+        "title": "Website Access and Hosting",
+        "text1": "The website",
+        "text2": "is hosted using Hostinger. When the website is accessed, technically necessary connection and server data may be processed, including IP address, access date/time, requested resource, browser/device information and technical error/security data.",
+        "text3": "This processing is required for secure, stable and technically necessary website operation and is based on Article 6(1)(f) GDPR.",
+        "text4": "Hostinger provides data-processing terms for covered hosting services. The specific Hostinger group company acting under the account contract and the server region used for this website depend on the configured Hostinger account/hosting contract. That configuration should be documented internally and reviewed when changed.",
+        "furtherInfo": "Further information:",
+        "and": "and"
+      },
+
+      "reservations": {
+        "title": "Guest Reservations",
+        "text1": "Guests do not need an account. Data may include first/last name, email, phone, postal address if retained, number of seats, date/time, optional message, selected host and technical reservation/confirmation data.",
+        "text2": "The data is used to transmit the reservation, check availability, document the reservation and send transactional emails. Processing is generally based on Article 6(1)(b) GDPR; necessary security/abuse-prevention processing may rely on Article 6(1)(f) GDPR.",
+        "recommendation": "remove the postal-address field unless genuinely required."
+      },
+
+      "selectedHost": {
+        "title": "Disclosure to the Selected Host",
+        "text": "Reservation data is disclosed to the host selected by the guest. DEHOGA Sachsen e.V. is responsible for processing needed to operate the platform and transmit the reservation. After receipt, the selected host processes the data under its own responsibility for reservation handling and its own hospitality service."
+      },
+
+      "email": {
+        "title": "Reservation Emails",
+        "text1": "After a successful reservation, a confirmation is sent to the guest and a notification is sent to the selected host. EmailJS is used as the technical email integration, and Gmail by Google is the email service connected to EmailJS.",
+        "text2": "The email flow may process the guest's name and email address, the selected host, reservation date/time, number of seats and other reservation information required for the confirmation message.",
+        "text3": "EmailJS publishes a data-processing agreement. Gmail is a Google service; under Google's privacy information, Google Ireland Limited is generally responsible for Google services provided to users in the European Economic Area. Google processes email content and related technical information in order to provide and secure Gmail.",
+        "text4": "The legal basis for transactional reservation messages is generally Article 6(1)(b) GDPR; necessary delivery/security processing may rely on Article 6(1)(f) GDPR.",
+        "furtherInfo": "Further information:",
+        "and": "and",
+        "recommendation": "the Gmail mailbox used for production reservation emails should be managed as a business account (preferably Google Workspace or another contractually suitable business email service)."
+      },
+
+      "firebase": {
+        "title": "Google Firebase",
+        "text": "Firebase Authentication is used only for host accounts. Google states that Firebase Authentication is operated through US data centres. Cloud Firestore stores platform/host/reservation data, and Cloud Storage for Firebase stores host images. Google provides Firebase data-processing/security terms and SCCs for relevant international transfers.",
+        "recommendation": "use/document an EU/EEA location for Firestore and Cloud Storage where available."
+      },
+
+      "storage": {
+        "title": "Technically Necessary Storage",
+        "text": "Technically necessary browser storage/tokens may be used for host login/session handling, language preference, security and necessary form/session state. No analytics, advertising or marketing trackers are currently planned."
+      },
+
+      "automated": {
+        "title": "No Automated Decision-Making",
+        "text": "Mischtisch Saxony currently does not use solely automated decision-making or profiling within Article 22 GDPR. A final seat-availability check is not guest profiling."
+      },
+
+      "retention": {
+        "title": "Recommended Retention",
+        "items": {
+          "operational": {
+            "label": "Operational reservation data:",
+            "text": "up to 90 days after reservation date"
+          },
+          "deletion": "Then deletion/anonymisation unless a specific legal need exists",
+          "logs": {
+            "label": "Security/error logs:",
+            "text": "generally up to 30 days"
+          },
+          "host": {
+            "label": "Host account/profile:",
+            "text": "while active; operational deletion generally within 30 days after final deactivation"
+          },
+          "images": {
+            "label": "Host images:",
+            "text": "until deletion/deactivation, subject to limited backup periods"
+          },
+          "email": {
+            "label": "Email delivery information:",
+            "text": "only as long as necessary for delivery/troubleshooting"
+          },
+          "dispute": "Data required for a concrete dispute may be retained separately with restricted access for as long as necessary. The regular German civil-law limitation period is generally three years."
+        }
+      },
+
+      "rights": {
+        "title": "Rights",
+        "text": "Subject to statutory requirements, data subjects may have rights of access, correction, erasure, restriction, portability and objection. Requests may be sent to"
+      },
+
+      "complaint": {
+        "title": "Complaint",
+        "text": "Data subjects may lodge a complaint with a competent data-protection supervisory authority."
+      },
+
+      "changes": {
+        "title": "Changes",
+        "text": "This Privacy Policy will be updated when platform functions, providers or legal requirements change."
+      }
+    }
+  },
+  "termsUses": {
+    "header": {
+      "eyebrow": "Terms & Reservations",
+      "title": "Terms of Use & Reservation",
+      "updated": "Last updated: August 2026"
+    },
+
+    "sections": {
+      "platformRole": {
+        "title": "Platform Role",
+        "text": "Mischtisch Saxony is operated by DEHOGA Sachsen e.V. and acts as an intermediary between guests and participating hosts. DEHOGA does not itself provide the host's hospitality services."
+      },
+
+      "minimumAge": {
+        "title": "Minimum Age",
+        "text": "Reservations may be made only by persons aged 18 or older. A person reserving several seats confirms that they are entitled to make the reservation for accompanying persons."
+      },
+
+      "reservation": {
+        "title": "Reservation",
+        "text": "The guest selects the host, date, time and number of seats and provides required contact details. Displayed availability is not yet a confirmation. A reservation is confirmed only after the final availability check succeeds and a confirmation is displayed and/or sent by email."
+      },
+
+      "multipleSeats": {
+        "title": "Multiple Seats",
+        "text": "Where sufficient capacity exists, several seats may be reserved in one booking. The guest is responsible for entering the correct number."
+      },
+
+      "accuracy": {
+        "title": "Accuracy",
+        "text": "Reservation information must be complete and accurate. Incorrect contact information may prevent important messages from being delivered."
+      },
+
+      "changesCancellations": {
+        "title": "Changes and Cancellations",
+        "text": "Mischtisch Saxony currently does not provide guest self-service changes, rescheduling or cancellations. Guests may contact the selected host directly. Whether a requested change/cancellation is accepted depends on the circumstances and any host-specific conditions. Mischtisch does not guarantee acceptance."
+      },
+
+      "hostChanges": {
+        "title": "Host Changes",
+        "text": "The current platform does not provide a host-side cancellation function. If a host exceptionally cannot honour a confirmed reservation, the host is responsible for contacting affected guests where reasonably possible."
+      },
+
+      "pricesPayments": {
+        "title": "Prices and Payments",
+        "text": "Mischtisch Saxony does not process online payments. Charges for host services are handled directly between guest and host."
+      },
+
+      "promotionsDiscounts": {
+        "title": "Promotions and Discounts",
+        "text": "Hosts may publish promotions, discounts or special offers. The host is responsible for the content, conditions, validity, availability and redemption of the offer."
+      },
+
+      "availabilityErrors": {
+        "title": "Availability and Technical Errors",
+        "text": "Availability can change because of concurrent reservations. The final technical check before confirmation is decisive. DEHOGA Sachsen e.V. does not guarantee uninterrupted or error-free operation."
+      },
+
+      "prohibitedUse": {
+        "title": "Prohibited Use",
+        "text": "Automated bulk reservations, knowingly false data, technical manipulation, attacks and unlawful use are prohibited."
+      },
+
+      "liability": {
+        "title": "Liability",
+        "text": "Statutory liability rules apply. DEHOGA Sachsen e.V. is not responsible for proper performance of the host's own hospitality services where DEHOGA does not provide those services and no broader statutory responsibility applies. Mandatory statutory claims remain unaffected."
+      },
+
+      "privacy": {
+        "title": "Privacy",
+        "text": "The Mischtisch Saxony",
+        "link": "Privacy Policy",
+        "suffix": "applies."
+      },
+
+      "governingLaw": {
+        "title": "Governing Law",
+        "text": "German law applies. Mandatory consumer-protection rules remain unaffected."
+      }
+    }
+  },
+  "hostTerms": {
+    "header": {
+      "eyebrow": "For Hosts",
+      "title": "Terms for Hosts",
+      "updated": "Last updated: August 2026"
+    },
+
+    "sections": {
+      "purpose": {
+        "title": "Purpose and Scope",
+        "text": "These Terms for Hosts govern participation in Mischtisch Saxony by restaurants, cafés, hotels and other approved hosts. The platform is operated by DEHOGA Hotel- und Gaststättenverband Sachsen e.V. (DEHOGA Sachsen e.V.)."
+      },
+
+      "registration": {
+        "title": "Registration and Activation",
+        "text1": "A host account may be created only with a registration code generated or approved by the platform. Issuing a registration code does not create an unconditional right to permanent participation.",
+        "text2": "The host must provide accurate, complete and current information during registration and while maintaining the profile."
+      },
+
+      "credentials": {
+        "title": "Login Credentials",
+        "text": "The host is responsible for protecting its login credentials. Credentials must not be shared with unauthorised persons. Suspected loss, disclosure or misuse should be reported to DEHOGA Sachsen e.V. without undue delay."
+      },
+
+      "oneTable": {
+        "title": "One Mischtisch per Host",
+        "text": "Under the current platform model, each host manages one Mischtisch. The host configures the table capacity, seat/table configuration and bookable times using the functions currently provided by the platform."
+      },
+
+      "schedules": {
+        "title": "Schedules and Capacity",
+        "intro": "The host is responsible for keeping all published availability information accurate and current, including:",
+        "items": {
+          "bookingDays": "booking days",
+          "times": "times",
+          "capacity": "capacity",
+          "specialOpenings": "special openings",
+          "closureDates": "closure dates",
+          "other": "other information relevant to availability"
+        },
+        "text": "Changes are effective on the platform only to the extent supported by the functions actually implemented."
+      },
+
+      "reservations": {
+        "title": "Reservations",
+        "text1": "The host receives the guest data required to handle a reservation and may use it only for reservation management, communication with the guest and directly related hospitality services unless another lawful basis exists.",
+        "text2": "The current platform does not provide a host-side cancellation function for existing reservations. If a confirmed reservation exceptionally cannot be honoured, the host is responsible for contacting the affected guest using the available contact details where reasonably possible."
+      },
+
+      "content": {
+        "title": "Photos, Logos and Other Content",
+        "text1": "The host may upload or publish only photos, logos, text and other material for which it holds all necessary rights and permissions.",
+        "text2": "This includes, where applicable, copyright, trade-mark rights, image/personality rights of identifiable persons and usage rights for commercially supplied images.",
+        "text3": "The host must ensure that its content does not infringe third-party rights or contain unlawful material."
+      },
+
+      "promotions": {
+        "title": "Promotions, Discounts and Special Offers",
+        "text1": "The host is responsible for the accuracy and transparency of promotions, discounts and special Mischtisch offers published through the platform.",
+        "intro": "Where relevant, the host must clearly state:",
+        "items": {
+          "content": "the content of the offer",
+          "validity": "the validity period",
+          "eligibility": "eligibility or redemption conditions",
+          "limitations": "limitations",
+          "price": "price or discount",
+          "availability": "availability"
+        },
+        "text2": "Internal notes must not be used as public promotional information.",
+        "text3": "If DEHOGA Sachsen e.V. becomes aware of a credible indication that published information may be misleading, unlawful or clearly incorrect, DEHOGA may require the host to correct or deactivate it. In serious or repeated cases, public visibility or the partner account may be suspended while the matter is reviewed."
+      },
+
+      "privacy": {
+        "title": "Privacy and Confidentiality",
+        "text1": "For reservation data received and subsequently used for the host's own reservation handling, the host acts as a separate controller under data-protection law.",
+        "text2": "Without an independent lawful basis, guest data must not be used for advertising, disclosed to unrelated third parties or used for purposes unrelated to the reservation.",
+        "text3": "The host must apply appropriate technical and organisational security measures and ensure that only authorised persons can access reservation data."
+      },
+
+      "privacyRequests": {
+        "title": "Privacy Requests from Guests",
+        "text1": "If the host receives a data-protection request concerning processing carried out under the host's own responsibility, the host is responsible for handling that request appropriately.",
+        "text2": "If a request concerns only the technical Mischtisch platform, the guest may additionally be referred to info@dehoga-sachsen.de."
+      },
+
+      "publicProfile": {
+        "title": "Public Profile Information",
+        "intro": "Information made public on the host profile may include:",
+        "items": {
+          "venueName": "venue name",
+          "address": "address/location and region",
+          "venueType": "venue type",
+          "contact": "public contact information",
+          "images": "approved images",
+          "description": "description",
+          "times": "Mischtisch times",
+          "specialDates": "special dates",
+          "promotions": "public promotions and offers"
+        },
+        "text": "The host is responsible for keeping this information accurate and current."
+      },
+
+      "technical": {
+        "title": "Technical Operation",
+        "text": "DEHOGA Sachsen e.V. aims to provide a reliable platform but does not guarantee uninterrupted availability. Maintenance, security measures, technical errors or external service providers may temporarily limit access."
+      },
+
+      "suspension": {
+        "title": "Suspension and Termination",
+        "text1": "The host may request deactivation of its partner account.",
+        "text2": "DEHOGA Sachsen e.V. may temporarily suspend an account or terminate participation, particularly where:",
+        "items": {
+          "falseInfo": "false or misleading information is provided",
+          "misuse": "the platform is misused",
+          "security": "security risks arise",
+          "thirdParty": "third-party rights are infringed",
+          "guestData": "guest data is used unlawfully",
+          "reservationProblems": "serious reservation problems occur repeatedly"
+        },
+        "text3": "Where appropriate, the host should be given an opportunity to clarify the issue before permanent suspension."
+      },
+
+      "liability": {
+        "title": "Liability",
+        "text": "Statutory liability rules apply. The host remains responsible for its own hospitality services, content, prices, promotions and fulfilment of confirmed reservations."
+      },
+
+      "hostPrivacy": {
+        "title": "Privacy",
+        "text": "The Host Privacy Notice additionally applies to processing connected with the host account."
+      },
+
+      "changes": {
+        "title": "Changes",
+        "text": "DEHOGA Sachsen e.V. may update these Terms for Hosts prospectively where technical, organisational or legal developments require changes. Material changes should be communicated to hosts in an appropriate manner."
+      }
+    }
+  }
+}

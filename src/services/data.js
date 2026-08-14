@@ -1,0 +1,2 @@
+export const REGIONS = ["Bayern", "Thüringen", "Sachsen", "Sachsen-Anhalt", "Brandenburg", "Berlin", "Mecklenburg-Vorpommern"];
+export const VENUE_TYPES = ["Gasthaus", "Restaurant", "Café", "Biergarten", "Imbiss", "Bar"];

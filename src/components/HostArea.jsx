@@ -118,10 +118,6 @@ export function HostArea({
   const [masse, setMasse] = useState(loc.masse || "");
   const [sonder, setSonder] = useState(loc.sonder || {});
 
-  useEffect(() => {
-    setSonder(loc.sonder || {});
-  }, [loc.sonder]);
-
   const [aktionen, setAktionen] = useState(loc.aktionen || []);
   const [angebot, setAngebot] = useState(loc.angebot || "");
   const [webhook, setWebhook] = useState(loc.webhook || "");
@@ -169,8 +165,11 @@ export function HostArea({
   const [showDiscardModal, setShowDiscardModal] = useState(false);
   const [pendingAction, setPendingAction] = useState(null);
 
-  const initialFormData = useMemo(
-    () => ({
+  // Baseline of the last persisted values. It is a state (not derived from
+  // loc) so Save can rebase it and Discard can revert to it reliably — a
+  // useMemo re-derived from the reloaded loc caused false "dirty" states
+  // (trimmed server values vs. raw inputs).
+  const [initialFormData, setInitialFormData] = useState(() => ({
       seats: (loc.tisch && loc.tisch.seats) || loc.seats || 8,
 
       days: [...(loc.days || [])].sort(
@@ -225,9 +224,7 @@ export function HostArea({
       telefon: loc.telefon || "",
 
       inhaber: session?.inhaber || loc.inhaber || "",
-    }),
-    [loc, session, normalizedInitialSlotsByDay],
-  );
+    }));
 
   // =========================================================
   // CURRENT FORM DATA
@@ -312,6 +309,34 @@ export function HostArea({
     ],
   );
 
+  // Revert every form field to a saved snapshot (used by the discard modal).
+  const applySnapshot = (snap) => {
+    setSeats(snap.seats);
+    setDays(snap.days);
+    setSlots(snap.slots);
+    setSlotsByDay(snap.slotsByDay);
+    setEffectiveFromByDay(snap.effectiveFromByDay);
+    setFensterVon(snap.fensterVon);
+    setFensterBis(snap.fensterBis);
+    setTakt(snap.takt);
+    setMehrfach(snap.mehrfach);
+    setMasse(snap.masse);
+    setSonder(snap.sonder);
+    setAktionen(snap.aktionen);
+    setAngebot(snap.angebot);
+    setWebhook(snap.webhook);
+    setEmail(snap.email);
+    setDesc(snap.desc);
+    setName(snap.name);
+    setStrasse(snap.strasse);
+    setPlz(snap.plz);
+    setCity(snap.city);
+    setRegion(snap.region);
+    setType(snap.type);
+    setTelefon(snap.telefon);
+    setInhaber(snap.inhaber);
+  };
+
   const isDirty = useMemo(() => {
     return JSON.stringify(currentFormData) !== JSON.stringify(initialFormData);
   }, [currentFormData, initialFormData]);
@@ -393,7 +418,9 @@ export function HostArea({
   const requestNavigation = (action) => {
     if (typeof action !== "function") return;
 
-    if (isDirty) {
+    // While a save is in flight the form is intentionally "dirty" — allow the
+    // tab switch instead of showing a misleading discard dialog.
+    if (isDirty && !saving) {
       setPendingAction(() => action);
       setShowDiscardModal(true);
       return;
@@ -550,6 +577,9 @@ export function HostArea({
       if (typeof reload === "function") {
         reload();
       }
+
+      // Rebase the dirty-check baseline to the values just persisted.
+      setInitialFormData(currentFormData);
 
       showToast(t("host.toasts.saved"));
     } catch (err) {
@@ -1760,7 +1790,7 @@ export function HostArea({
             </h3>
             <p className="notice">{t("host.modal.text")}</p>
             <div
-              style={{ display: "flex", justifyContent: "flex-end", gap: 10 }}
+              style={{ display: "flex", justifyContent: "flex-end", gap: 10, marginTop: 10 }}
             >
               <button
                 className="btn btn-ghost btn-sm"
@@ -1775,9 +1805,16 @@ export function HostArea({
                 className="btn btn-danger btn-sm"
                 onClick={() => {
                   setShowDiscardModal(false);
+
+                  // Revert the unsaved edits so the tab can be left cleanly;
+                  // without this, switching back re-opens the modal because
+                  // isDirty would still be true.
+                  applySnapshot(initialFormData);
+
                   if (pendingAction) {
                     pendingAction();
                   }
+
                   setPendingAction(null);
                 }}
               >

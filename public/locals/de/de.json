@@ -639,7 +639,11 @@
   },
   "aktionen": {
     "validation": {
-      "invalidDateRange": "Das „Bis“-Datum darf nicht vor dem „Von“-Datum liegen."
+      "invalidDateRange": "Das „Bis“-Datum darf nicht vor dem „Von“-Datum liegen.",
+      "titleRequired": "Bitte einen Titel für die Aktion eingeben.",
+      "fromRequired": "Bitte ein Startdatum wählen.",
+      "toRequired": "Bitte ein Enddatum wählen.",
+      "pastDate": "Das Startdatum darf nicht in der Vergangenheit liegen."
     },
     "time": {
       "hour": " Uhr"

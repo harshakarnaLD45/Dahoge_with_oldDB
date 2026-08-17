@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { buildSlots } from "../utils/format";
 import { aktionRange } from "../utils/aktion";
+import { dateKey } from "../utils/dates";
 
 export function AktionenEditor({ aktionen, onChange, showToast }) {
 
@@ -23,7 +24,26 @@ export function AktionenEditor({ aktionen, onChange, showToast }) {
     .sort((a, b) => a.von.localeCompare(b.von));
 
   let add = () => {
-    if (titel.trim().length < 3 || !von || !bis) return;
+    if (titel.trim().length < 3) {
+      showToast?.(t("aktionen.validation.titleRequired"));
+      return;
+    }
+
+    if (!von) {
+      showToast?.(t("aktionen.validation.fromRequired"));
+      return;
+    }
+
+    // "yyyy-mm-dd" keys compare lexicographically; today itself is allowed.
+    if (von < dateKey(new Date())) {
+      showToast?.(t("aktionen.validation.pastDate"));
+      return;
+    }
+
+    if (!bis) {
+      showToast?.(t("aktionen.validation.toRequired"));
+      return;
+    }
 
     if (bis < von) {
       showToast?.(
@@ -335,7 +355,6 @@ export function AktionenEditor({ aktionen, onChange, showToast }) {
           type="button"
           className="btn btn-ghost btn-sm"
           onClick={add}
-          disabled={titel.trim().length < 3 || !von || !bis}
         >
           {t("aktionen.add")}
         </button>

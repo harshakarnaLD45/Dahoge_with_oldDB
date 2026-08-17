@@ -41,6 +41,11 @@ export function HostPage({
   const [mode, setMode] = useState("login");
   const [regBetrieb, setRegBetrieb] = useState(null);
 
+  // True once the direct venue read has settled (found or missing). While it
+  // is false the venue may simply still be loading — the "venue not found"
+  // error must not flash on page load before Firebase restored the session.
+  const [venueLoaded, setVenueLoaded] = useState(false);
+
   // Session restoration is asynchronous (Firebase rehydrates auth state on
   // page load); getSession() waits for it, so a signed-in host is not shown
   // the login form right after loading the page.
@@ -70,17 +75,23 @@ export function HostPage({
   // the host area does not depend on the global venue list from AppContext.
   useEffect(() => {
     if (!session?.betriebId) {
-      setRegBetrieb(null);
+      setVenueLoaded(true);
       return;
     }
 
     let alive = true;
 
+    setVenueLoaded(false);
+
     (async () => {
       try {
         const venue = await getVenue(session.betriebId);
         if (alive && venue) setRegBetrieb(venue);
-      } catch {}
+      } catch {
+        // Read failed — treat as missing below once the fetch has settled.
+      } finally {
+        if (alive) setVenueLoaded(true);
+      }
     })();
 
     return () => {
@@ -225,17 +236,19 @@ export function HostPage({
     </div>
   );
 
+  const loadingScreen = (
+    <div
+      className="mt-wrap"
+      style={{ padding: "40px 20px 60px", maxWidth: 960 }}
+    >
+      <span className="notice">
+        {t("hostPage.loading")}
+      </span>
+    </div>
+  );
+
   if (session === undefined) {
-    return (
-      <div
-        className="mt-wrap"
-        style={{ padding: "40px 20px 60px", maxWidth: 960 }}
-      >
-        <span className="notice">
-          {t("hostPage.loading")}
-        </span>
-      </div>
-    );
+    return loadingScreen;
   }
 
   if (session) {
@@ -247,31 +260,39 @@ export function HostPage({
         ? regBetrieb
         : null);
 
-    return loc ? (
-      <div className="host-page-container">
-        <HostArea
-          key={loc.id}
-          loc={loc}
-          session={session}
-          onLogout={logout}
-          reload={safeReload}
-          showToast={safeShowToast}
-          onTischform={() => {
-            if (typeof onTischform !== "function") {
-              safeShowToast(
-                t("hostPage.tableShapeNavigationNotConfigured"),
-              );
-              return;
-            }
+    if (loc) {
+      return (
+        <div className="host-page-container">
+          <HostArea
+            key={loc.id}
+            loc={loc}
+            session={session}
+            onLogout={logout}
+            reload={safeReload}
+            showToast={safeShowToast}
+            onTischform={() => {
+              if (typeof onTischform !== "function") {
+                safeShowToast(
+                  t("hostPage.tableShapeNavigationNotConfigured"),
+                );
+                return;
+              }
 
-            onTischform(loc.id);
-          }}
-          onSeen={onSeen}
-        />
-      </div>
-    ) : (
-      renderAuth(t("hostPage.venueNotFound"))
-    );
+              onTischform(loc.id);
+            }}
+            onSeen={onSeen}
+          />
+        </div>
+      );
+    }
+
+    // The venue read is still in flight — keep the loading state instead of
+    // prematurely declaring the venue missing right after session restore.
+    if (!venueLoaded) {
+      return loadingScreen;
+    }
+
+    return renderAuth(t("hostPage.venueNotFound"));
   }
 
   return renderAuth(null);

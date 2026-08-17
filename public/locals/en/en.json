@@ -632,7 +632,11 @@
   },
   "aktionen": {
     "validation": {
-      "invalidDateRange": "The “to” date cannot be before the “from” date."
+      "invalidDateRange": "The “to” date cannot be before the “from” date.",
+      "titleRequired": "Please enter a title for the promotion.",
+      "fromRequired": "Please choose a start date.",
+      "toRequired": "Please choose an end date.",
+      "pastDate": "The start date cannot be in the past."
     },
     "time": {
       "hour": " hour"

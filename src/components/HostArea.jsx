@@ -1192,7 +1192,7 @@ export function HostArea({
                       const hasReservation = reservationWeekdays.has(day);
 
                       return (
-                        <div key={day} className="day-slot-card">
+                        <div key={day} className="day-slot-card" style={hasReservation ? { background: "#f7f3ea" } : { background: "#ffffff" }}>
                           <div className="day-slot-label">
                             {dayLongName(day)}
                           </div>
@@ -1467,7 +1467,7 @@ export function HostArea({
               position: "sticky",
               bottom: 10,
               zIndex: 50,
-              background: "var(--porzellan)",
+              background: "white",
               padding: "12px",
               marginTop: 20,
               borderTop: "1px solid #D4D1C8",

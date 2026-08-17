@@ -1,6 +1,6 @@
 // Betriebs-Detailseite: Datum/Uhrzeit, Tischplan, Kontaktformular, Bestätigung
 
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -75,6 +75,19 @@ export function VenueDetail({
   const todayKey = dateKey(new Date());
 
   const isPast = (dk) => dk < todayKey;
+
+  const dateScrollRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll the day-picker to start at today's date so the customer sees
+    // available booking days first; past dates remain accessible via scroll.
+    if (!dateScrollRef.current) return;
+    const todayIdx = days.findIndex((d) => dateKey(d) === todayKey);
+    if (todayIdx >= 0) {
+      // Each button is 48 px wide with an 8 px gap.
+      dateScrollRef.current.scrollLeft = Math.max(0, todayIdx * 56);
+    }
+  }, []);
 
   const initial =
     days.find(
@@ -936,6 +949,7 @@ export function VenueDetail({
         </div>
 
         <div
+          ref={dateScrollRef}
           style={{
             display: "flex",
             gap: 8,

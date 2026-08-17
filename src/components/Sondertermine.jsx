@@ -124,7 +124,6 @@ export function Sondertermine({ sonder, onChange, standardSlots, showToast }) {
                 justifyContent: "space-between",
                 alignItems: "center",
                 gap: 10,
-                flexWrap: "wrap",
                 border: "1px solid var(--linie)",
                 borderRadius: 10,
                 padding: "8px 12px",
@@ -136,7 +135,8 @@ export function Sondertermine({ sonder, onChange, standardSlots, showToast }) {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 10,
-                  flexWrap: "wrap",
+                  flex: "1 1 auto",
+                  minWidth: 0,
                 }}
               >
                 {entry.bild && (
@@ -153,7 +153,12 @@ export function Sondertermine({ sonder, onChange, standardSlots, showToast }) {
                   />
                 )}
 
-                <span>
+                <span
+                  style={{
+                    minWidth: 0,
+                    overflowWrap: "anywhere",
+                  }}
+                >
                   <b>{shortDate(d)}</b> ·{" "}
 
                   {entry.typ === "zu" ? (
@@ -180,6 +185,8 @@ export function Sondertermine({ sonder, onChange, standardSlots, showToast }) {
               <button
                 type="button"
                 className="btn btn-danger btn-sm"
+                sx={{ minWidth: "55px" }}
+                style={{ flexShrink: 0 }}
                 onClick={() => remove(d)}
               >
                 {t("sondertermine.actions.remove")}

@@ -288,7 +288,6 @@ body {
 .chip:focus {
   outline: 2px solid var(--kobalt);
   outline-offset: 2px;
-  border-radius: 2px;
 }
 
 .btn:focus:not(:focus-visible),

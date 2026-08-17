@@ -127,7 +127,7 @@ function VenueDetailRoute() {
 }
 
 function AppContent() {
-  const { locations, reload, showToast } = useApp();
+  const { locations, reload, showToast, toast } = useApp();
   const navigate = useNavigate();
 
   // Handle opening a specific venue detail view
@@ -243,6 +243,32 @@ function AppContent() {
       </main>
 
       <Footer locationCount={locations.length} />
+
+{/* Toast notifications — rendered once in AppContent for all pages */}
+{toast && (
+        <div
+          style={{
+            position: "fixed",
+            top: 24,
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 9999,
+            background: "var(--kobalt)",
+            color: "#fff",
+            padding: "12px 24px",
+            borderRadius: 10,
+            boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+            fontSize: 14,
+            fontWeight: 500,
+            whiteSpace: "nowrap",
+            maxWidth: "90vw",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
+        >
+          {toast}
+        </div>
+      )}
     </div>
   );
 }

@@ -448,6 +448,13 @@ export function seatPositions(tisch) {
 // =========================================================
 
 export function distributeSeats(tisch, seats) {
+  // Preserve the saved table configuration when the seat count matches,
+  // so preset layouts (e.g. E8S → top=3,bottom=3,left=1,right=1) are
+  // retained instead of recalculated into a naive even split.
+  if (tisch && tisch.seats === seats) {
+    return { ...tisch };
+  }
+
   const shape =
     tisch && tisch.custom
       ? tisch.custom.shape
